@@ -30,10 +30,91 @@
       
      <section>
       <h3>type="text"/ type="password"</h3>
-      사용자명 : <input type="text" name="userName" id="user_name" maxlength="10" placeholder="이름을 입력하세요"><br>
-      비밀번호 : <input type="password" >
+      사용자명 : <input type="text" name="userName" id="user_name" maxlength="10" placeholder="이름을 입력하세요" autofocus><br>
+      비밀번호 : <input type="password" name="userPassWord" id="user_password" minlength="4" required><br>
+
+      <input type="submit" value="확인">
+      <input type="reset" value="취소">
+      <input type="button" value="버튼">
      </section>
      <hr>
-  </form>  
+
+     <section>
+      <h3>여러 줄의 텍스트 박스</h3>
+      <textarea name="textBox" id="textBox" cols="30" rows="10" placeholder="텍스트 박스">인라인. 이 안에 글 작성시 박스 안에 출력. placeholder와 다름</textarea>
+     </section>
+     <hr>
+
+     <section>
+      <h3>라디오 버튼</h3>
+      <p>하나의 값만 선택 가능. <strong>name 속성은 반드시 같아야 함</strong></p>
+      <input type="radio" name="choice" value="선택1">선택1
+      <input type="radio" name="choice" value="선택2">선택2
+      <input type="radio" name="choice" value="선택3">선택3
+      <input type="radio" name="choice" value="선택4" checked>선택4
+      <!-- name의 값이 다르면 복수 선택 가능하다 -->
+     </section>
+     <hr>
+     <section>
+      <h3>체크박스</h3>
+      <p>여러 개의 값 선택 가능. <strong>name 속성은 반드시 같아야 함</strong></p>
+      <input type="checkbox" name="decide" value="선택1" checked>선택1
+      <input type="checkbox" name="decide" value="선택2">선택2
+      <input type="checkbox" name="decide" value="선택3">선택3
+      <input type="checkbox" name="decide" value="선택4">선택4
+     </section>
+     <hr>
+
+     <section>
+      <h3>드롭다운 형태의 메뉴</h3>
+      <select name="menu" id="menu">
+        <!-- 반드시 하나의 option은 있어야 함 -->
+        <option value="">이곳에서 선택해 주세요</option>
+        <!-- 옵션 그룹을 사용하는 경우 label 이름 필수 -->
+        <optgroup label="그룹 1">
+          <option value="아이스크림">아이스크림</option>
+          <option value="푸딩" selected>푸딩</option>
+          <option value="약과">약과</option>
+        </optgroup>
+        <optgroup label="그룹 2">
+          <option value="아아">아이스아메리카노</option>
+          <option value="아라">아이스카페라떼</option>
+          <option value="아바라">아이스바닐라라떼</option>
+        </optgroup>
+      </select>
+     </section>
+
+     <section>
+      <h3>파일 첨부 버튼</h3>
+      <input type="file" name="userFile">
+      <!-- accept="특정 확장자만 첨부" -->
+      <input type="file" name="file" accept=".jpg, .png, .pdf, .xlsx"><br>
+      <button type="submit">전송</button>
+      <button type="reset">취소</button>
+     </section>
+     <hr>
+     <section>
+      <h3>날짜</h3>
+      <input type="date" name="yymmdd">
+      <hr>
+      <h3>이메일</h3>
+      <input type="email" name="userEmail">
+      <hr>
+      <h3>url</h3>
+      <input type="url" name="userUrl">
+      <hr>
+      <h3>검색</h3>
+      <input type="search" name="userSearch">
+      <hr>
+      <h3>범위</h3>
+      <input type="range" name="userRange">
+      <hr>
+      <h3>숫자</h3>
+      <input type="number" name="userNumber">
+      <hr>
+      <h3>전화</h3>
+      <input type="tel" name="userTel">
+     </section>
+  </form>
 </body>
 </html>
