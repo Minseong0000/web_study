@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+body {
+  background-color: lightblue;
+}
+
+h2 {
+  background-color:#FFE3CA;
+}
+#title1 {
+  color:#FF407D;
+}
+#title2 {
+  color:#9195F6;
+}
+#title3 {
+  color:#9BCF53;
+}
+#title4 {
+  color:#2D9596;
+}
