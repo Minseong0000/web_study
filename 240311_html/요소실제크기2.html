@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>요소실제크기2 </title>
+  <style>
+    body {
+      /* 어절 기준 줄바꿈 */
+      word-break: normal;
+      word-break: break-all;/* 어절에 맞춰 줄바꿈 영어 한정 */ 
+      word-break: keep-all;/* 어절을 유지하며 줄바꿈. 한글 적용 */ 
+    }
+    .box {
+      font-weight: bold;
+      background-color: #ddd;
+      font-size: 20px;
+    }
+    .box1 {
+      background-color: #E178C5;
+      color: #fff;
+      width: 400px; height: 300px;
+      outline: 10px solid #891652;
+      margin: 50px auto;
+    }
+    .box2 {
+      border: solid 3px #FFEDD8;
+      width: 300px; height: 300px;
+      margin: 0 auto;
+      padding-top: 100px; padding-left: 20px;
+    }
+    .box3 {
+      background-color: #FEC7B4;
+      outline: 4px solid #000;
+      width: 300px; height: 400px;
+      margin: 20px auto 0;
+      padding: 20px 10px 0 30px;
+    }
+    .box4 {
+      background-color:  #D2D180;
+      border: dotted 2px #D2D180;
+      border-top: none;
+      width: 400px; height: 200px;
+      outline: rgba(218,121,214,0.5) 30px solid;
+      margin: 20px auto 0;
+      padding: 10px 20px 0 0;
+    }
+    .box5 {
+      /*
+       가로 600, 세로 250
+       안쪽 여백 위 아래 50
+       안쪽 여백 좌 우 20
+       테두리 위 10, 오른쪽 5, 아래10, 왼쪽 5
+      */
+      background-color: #FFEDD8;
+      width: 600px; height: 250px;
+      padding: 50px 20px;
+      border: 10px solid #000;
+      border-right-width: 5px;
+      border-left-width: 5px;
+
+    }
+    .box6 {
+      /* 가로150, 세로200
+      요소 중앙 정렬
+      바깥 여백 위 50
+      안쪽 여백 위 10, 안쪽 여백 아래 50, 안쪽 여백 오른쪽 50, 안쪽 여백 왼쪽 50
+      테두리 위10, 아래5, 왼쪽4, 오른쪽4
+      */
+      background-color: #A4CE95;
+      width: 150px; height: 200px;
+      margin: 50px auto 0;
+      padding: 50px;
+      padding-top: 10px;      
+      border: 10px 4px 5px solid #D2D180; 
+    }
+  </style>
+</head>
+
+<body>
+  <h1>요소실제크기2</h1>
+  <div class="box box1">
+    <p>너비: w400+(p/b/d=0)=400</p>
+    <!-- auto값은 계산에 안들어감 -->
+    <p>높이: h300+m50+m50=400</p>
+  </div>
+  <div class="box box2">
+    <p>너비: w300+p20+b3+b3=326</p>
+    <p>높이: h300+p100+b3+b3=406</p>
+  </div>
+  <div class="box box3">
+    <p>너비: w300+p10+p30=340</p>
+    <p>높이: h400+m20+p20=440</p>
+  </div>
+  <div class="box box4">
+    <p>너비:w400+p20+b2+b2=424</p>
+    <p>높이:h200+m20+p10+b2=232</p>
+  </div>
+  <div class="box box5">
+    <p>너비:w600+p20+p20+b5+b5=650</p>
+    <p>높이:h250+p50+p50+b10+b10=370</p>
+  </div>
+  <div class="box box6">
+    <p>너비: w150+p50+p50+b4+b4=258</p>
+    <p>높이: h200+m50+p10+p50+b10+b5=325</p>
+    <p>국가는 재해를 예방하고 그 위험으로부터 국민을 보호하기 위하여 노력하여야 한다.</p>
+  </div>
+</body>
+</html>
