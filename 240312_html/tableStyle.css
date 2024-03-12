@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+table {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  margin: 50px auto;
+}
+/* table (> tbody)> tr > td {
+  background-color: #ddd;
+} */
+table td {
+  border: 3px solid #999;
+  width: 100px; height: 100px;
+}
+table.box1 {/* 종속 선택자 */
+  /* 컨텐츠가 없는 경우 셀 처리 방법 */
+  empty-cells: show;/* 기본값 */
+}
+table.box1 tr td {
+  border-color: #891652;
+}
+table.box2 {/* 종속 선택자 */
+  /* 컨텐츠가 없는 경우 셀 처리 방법 */
+  empty-cells: hide;/* 숨김 */
+}
+table.box2 tr td {
+  border-color: #240A34;
+}
+table.box3 {
+  /* 셀과 셀 사이의 간격. 테이블 요소에만 해당되는 속성 */
+  border-spacing: 50px;
+  border-spacing: 10px 50px;/* x y */
+}
+table.box4 {
+  border-spacing: 0;
+  border-collapse: separate;/* 기본값. 겹치는 셀 테두리 값 그대로 둠 */
+}
+table.box5 {
+  border-collapse: collapse;/* 겹치는 셀 테두리 값 제어 */
+}

@@ -9,20 +9,58 @@
       margin: auto;
     }
     fieldset {
-      border: 100px 50px;
-      border-color: #ddd;
+        border-color: aqua;
+        border-radius: 10px;
+        text-align: right;
+        padding-right: 30px;
+        background-color: #fff;
     }
+    fieldset > legend {
+        background-color: aqua;
+        padding: 5px 10px;
+        border-radius: 10px;
+        text-align: left;
+        color: blueviolet;
+    }
+    form {
+      background-color: #ddd;
+      padding: 40px 30px;
+    }
+    label {
+      color: blueviolet;
+    }
+    #user_name {
+      border: none;
+      border-bottom: 1px solid #000;
+    }
+    #user_email {
+      border: none;
+      border-bottom: 1px solid #000;
+    }
+    .button {
+      background-color: aqua;
+      color: #fff;
+    }
+    .button:hover {
+      color: bisque;
+      background-color: #000;
+    }
+
+    
   </style>
 </head>
 
 <body>
+
+ <form>
   <fieldset>
     <legend>회원가입</legend>
-    이름: <input type="text"><br>
-    이메일: <input type="text"><br>
-    <input type="button" value="가입">
-    <input type="button" value="취소">
-
+    <label for="user_name">이름</label> : <input type="text" name="userName" id="user_name"><br>
+    <p></p><label for="user_email">이메일</label> : <input type="email" name="userEmail" id="user_email"></p> 
+    <input type="button" value="가입" class="button">
+    <input type="button" value="취소" class="button">
+ 
   </fieldset>
+ </form>
 </body>
 </html>

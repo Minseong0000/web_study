@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>formStyleEx</title>
+  <!-- "Noto Sans KR" <- 이 서체를 쓰기 위한 사전 설정 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- CDN(contents delivery network) -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <!-- 외부선언 -->
+  <link rel="stylesheet" href="./formStyleEx.css">
+</head>
+
+<body>
+  <form>
+    <!-- 
+      <button>
+        폼과 관련된 값을 서버로 전송할 때 사용
+        사용자와의 상호작용이 필요할 때 사용(값을 서버에 전송하고 그 결과를 사용자에게 피드백)
+
+      <a>
+        다른 페이지로의 이동이 필요할 때
+        페이지간의 이동(더보기, 새창 띄우기, 서브페이지, 외부 페이지 이동 등등)
+        이벤트 팝업....  
+     -->
+
+    <fieldset>
+      <legend>회원가입</legend>
+      <label for="userName">이름 : </label>
+      <input type="text" id="userName" name="userName" required autofocus>
+      <br>
+      <label for="userEmail">이메일 : </label>
+      <input type="text" id="userEmail" name="userEmail">
+      <br>
+
+      <button type="submit">가입</button>
+      <button type="reset">취소</button>
+    </fieldset>
+  </form>
+  
+</body>
+</html>
