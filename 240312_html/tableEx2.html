@@ -4,18 +4,38 @@
   <meta charset="utf-8">
   <title>tableEx2</title>
   <style>
+    table {
+      background-color: orange;
+      padding: 10px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    table td,th {
+      border: 3px solid #ddd;
+      width: 100px; height: 20px;
+      padding: 10px;
+      text-align: center;
+    }
+    .table1 td,th {
+      border: dotted 3px red;
+    }
     
+    
+    table th[colspan="2"] {
+     border: none;
+    }
+
   </style>
 </head>
 
 <body>
   <h2>table style 연습 2</h2>
-  <table>
-    <tbody>
-      <table>
+
+
+      <table class="table1">
+      <tbody>
         <tr>
-          <th>프로축구 경기 일정</th>
-          <td></td>
+          <th colspan="2">프로축구 경기 일정</th>
         </tr>
 
         <tr>
@@ -26,18 +46,19 @@
         <tr>
           <th>부산</th>
           <td>부산vs대전</td>
+      
         </tr>
 
         <tr>
           <th>서울</th>
           <td>서울vs강원</td>
-        </tr>
+        </tr> 
+      </tbody>
       </table>
-
-      <table>
+<br>
+      <table class="table2">
         <tr>
-          <th>프로축구 경기 일정</th>
-          <td></td>
+          <th colspan="2">프로축구 경기 일정</th>
         </tr>
 
         <tr>

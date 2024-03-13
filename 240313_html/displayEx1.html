@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>displayEx1</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    h1, ul {
+      text-align: left;
+    }
+
+    menu {
+      padding-left: 0;
+      /* background-color: #ddd; */
+    }
+    menu li {
+      display: inline-block; 
+      /* background-color: #ddd; */
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 5px 20px;
+      border: 2px solid #000;
+      background-color: orange;
+      margin: 0 5px;
+      display: block;
+    }
+    a:hover {
+      background-color: red;
+      cursor: pointer;
+      color: #fff;
+      /* .gnb li:hover a ->li코드에 마우스를 올렸을때 a의 성격을 바꿔라 */
+    }
+    
+    
+   
+  </style>
+</head>
+
+<body>
+  <h1>display 연습1</h1>
+  <ul>
+    <li>마우스를 올리면 글자색과 배경색 변경</li>
+    <li>중앙 정렬</li>
+  </ul>
+
+  <menu class="gnb">
+    <li><a href="#">menu1</a></li>
+    <li><a href="#">menu2</a></li>
+    <li><a href="#">menu3</a></li>
+    <li><a href="#">menu4</a></li>
+  </menu>
+  
+</body>
+</html>
