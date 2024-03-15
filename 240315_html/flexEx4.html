@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>flexEx4</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    /* .wrapper {
+      display: flex;
+      align-items: flex-end;
+      height: 100vh;
+    }
+    .wrapper footer {
+      background-color: aquamarine;
+      width: 69.742vw;
+      margin: 0 auto;
+      padding: 1vw 2vw;
+      box-sizing: border-box;width기준(border+padding) 
+    }
+    */
+
+    .wrapper {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+
+    }
+    .wrapper footer {
+      background-color: aquamarine;
+      width: 69.742vw;
+      /* margin: 0 auto; */
+      padding: 1vw 2vw;
+      box-sizing: border-box;
+
+      /* align-self: flex-end; 플렉스 아이템에 직접 적용 */
+
+      /* 플렉스 아이템에 직접 적용
+        margin을 통해 개별적으로 위치지정 가능. 더 섬세하게 조정 가능
+      */
+      /* margin: auto;center center */
+      /* margin-left: auto;여백이 왼쪽으로 들어가기 때문에 아이템은 오른쪽 배치 */
+      /* margin-right: auto;여백이 오른으로 들어가기 때문에 아이템은 왼쪽 배치 */
+      /* margin-bottom: auto;여백이 아래쪽으로 들어가기 때문에 아이템은 위쪽 배치 */
+      /* margin-top: auto;여백이 위쪽으로 들어가기 때문에 아이템은 아래쪽 배치 */
+      margin: 5rem auto 2rem;
+      margin: auto auto 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper"><!-- flex container -->
+   <footer><!-- flex item -->
+     <h2>footer</h2>
+     <p>끓는 그림자는 꾸며 아니한 충분히 인생에 약동하다. 청춘 천지는 그림자는 열매를 인간의 남는 꽃이 이상은 불러 사막이다. 하는 위하여서 가장 그들은 무엇은 피다. 그들의 것은 풍부하게 이것이다. 부패를 대충을 역사를 살 있다. 자신과 남는 이상 소금이라 원질이 풀밭에 오아이스도 있는가? 얼음이 실현에 따뜻한 품고 위하여서. 돋는다.</p>
+   </footer>
+  </div>
+</body>
+</html>

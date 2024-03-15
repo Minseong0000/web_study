@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>flexEx5</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+    
+    label {
+      background-color: #ddd;
+      display: flex;
+      width: 30vh;
+      margin: 0 5px 0;
+      justify-content: flex-end;
+      text-align: right;
+    }
+    label[for=channel3] {
+      padding-top: 10px; padding-bottom: 10px;
+    }
+    label[for=channel4] {
+      padding-top: 10px; padding-bottom: 10px;
+    }
+    label[for=channel5] {
+      padding-top: 10px; padding-bottom: 10px;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      margin: 10px;
+    }
+  
+  </style>
+</head>
+
+<body>
+  <h1>각 폼 제목의 세로 중앙 정렬</h1>
+  <form>
+    <div class="wrapper wrapper1">
+     <input type="text" id="channel1" placeholder="플렉스 적용하기">
+     <label for="channel1">채널 키워드</label>
+    </div>
+    <div class="wrapper wrapper2">
+     <input type="text" id="channel2" placeholder="플렉스 적용하기">
+     <label for="channel2">채널 키워드</label>
+    </div>
+    <div class="wrapper wrapper3">
+     <input type="text" id="channel3" placeholder="플렉스 적용하기">
+     <label for="channel3">채널 키워드 채널 <br> 키워드</label>
+    </div>
+    <div class="wrapper wrapper4">
+     <input type="text" id="channel4" placeholder="플렉스 적용하기">
+     <label for="channel4">채널 키워드 channel <br> keyword</label>
+    </div>
+    <div class="wrapper wrapper5">
+     <input type="text" id="channel5" placeholder="플렉스 적용하기">
+     <label for="channel5">channel keyword 채널 <br> 키워드</label>
+    </div>
+  </form>
+</body>
+</html>
