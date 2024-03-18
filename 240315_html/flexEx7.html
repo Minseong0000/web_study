@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>flexEx7</title>
+  <style>
+    body {
+      font-size: 2em;
+      font-weight: bold;
+      margin: 0; 
+    }
+    .menu {
+      background-color: skyblue;
+      margin: 0;
+      padding-left: 0;  
+      display: flex;  
+      width: 100vw; 
+      justify-content: space-around;
+    }
+    ul li {
+      display: inline-block;
+    }
+    a {
+      display: flex;
+      text-decoration: none;
+      color: black;
+      width: calc(100vw / 5);
+      height: 60px;
+      line-height: 60px;
+      justify-content: center;
+    }
+    a:active {
+      background-color: blue;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Company</a></li>
+    <li><a href="#">Product</a></li>
+    <li><a href="#">Service</a></li>
+    <li><a href="#">Board</a></li>
+  </ul>
+</body>
+</html>

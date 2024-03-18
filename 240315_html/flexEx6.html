@@ -8,16 +8,30 @@
       margin: 0;
       display: flex;
       width: 100vw;
+      height: 40px;
+      line-height: 40px;
+    } 
+    .container {
+      display: flex;
     }
     header {
       background-color: blueviolet;
+      box-sizing: border-box;
+     
     }
     .contents {
       background-color: aqua;
+      width: calc(100vw - 84px)
+    
+      
     }
     nav {
       background-color: aquamarine;
+      box-sizing: border-box;
+      padding-left: 5px;
     }
+   
+    
 
   </style>
 </head>
@@ -27,7 +41,7 @@
       <header>로고</header>
       <div class="contents">
         <input type="text">
-        <button type="submit">검색</button>    
+        <button type="submit">검색</button>          
       </div>
       <nav>메뉴</nav>
     </div>

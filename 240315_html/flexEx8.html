@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>flexEx8</title>
+  <style>
+    body {
+      text-align: center;
+    }
+   .container {
+      border: 3px solid #000;
+      margin: 0 auto;
+      width: 640px; height: 500px;
+
+      display: flex;
+      flex-flow: column wrap;/* flex-direction, flex-wrap */
+      justify-content: space-evenly;
+      align-content: space-evenly;
+
+   }
+   .container figure {
+    margin: 0;
+
+   }
+   .container figure img {
+    vertical-align: top;
+   }
+   .container figure figcaption {
+    background-color: #000;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 5px 0;
+   }
+
+  </style>
+</head>
+
+<body>
+  <h1>상하 정렬 갤러리</h1>
+
+  <div class="container">
+
+    <figure>
+     <img src="https://placehold.co/300x200/007F73/fff?text=img1&font=PTSans" alt="img1">
+     <figcaption>title1</figcaption>
+    </figure>
+
+    <figure>
+     <img src="https://placehold.co/300x200/A8CD9F/fff?text=img2&font=Roboto" alt="img2">
+     <figcaption>title2</figcaption>
+    </figure>
+
+    <figure>
+     <img src="https://placehold.co/300x200/8C6A5D/fff?text=img3&font=Oswald" alt="img3">
+     <figcaption>title3</figcaption>
+    </figure>
+
+    <figure>
+     <img src="https://placehold.co/300x200/FDA403/fff?text=img4&font=Lora" alt="img4">
+     <figcaption>title4</figcaption>
+    </figure>
+  </div>
+
+
+</body>
+</html>
