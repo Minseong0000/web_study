@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>수열선택자</title>
+  <style>
+    body {
+      text-align: center;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+    }
+    .gnb {
+      list-style: none;  
+      padding: 0;
+      width: 80%;
+
+      display: flex;
+      justify-content: center;
+      
+    }
+    .gnb li a {
+      padding: 5px 20px;
+      text-decoration: none;
+      color: #000;
+      font-size: 8px;
+      display: flex;
+      width: 100%;
+      
+    }
+    .gnb li a:hover {
+      background-color: chocolate;
+      color: #fff;      
+    }
+    ul li:first-child {
+      background-color: #EABE6C;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+    ul li:last-child {
+      background-color: #EABE6C;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    ul li:nth-child(5) {
+      background-color: #EABE6C;
+    }
+    li:nth-child(odd) {
+      background-color: bisque;
+    }
+    li:nth-child(even) {
+      background-color: #ACE2E1;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <ul class="gnb">
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">7</a></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#">9</a></li>
+  </ul>
+</body>
+</html>

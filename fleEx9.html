@@ -4,69 +4,70 @@
   <meta charset="utf-8">
   <title>flexEx9</title>
   <style>
-     body {
+    body {
+      margin: 0;
       text-align: center;
-      width: 100vw; height: 100vh;
-      margin: 0 50px;
     }
-    .container {
-      border: 2px solid #000;
-      width: 80vw; height: 80vh;
-      flex-wrap: wrap;
-      
+    .gallery {
+      list-style: none;
+      padding: 0; margin: 0 auto;
+      border: 3px solid #000;
+      width: 80vw;
+
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-evenly;
       align-content: space-evenly;
     }
-    .container figure {
-      margin: 0;
+    .gallery li {
+      background-color: #ddd;
+      margin: 1%;
+      width: 31.33%;
     }
-    .container figure img {
+    .gallery li img {
       vertical-align: top;
+      width: 100%;
     }
-    .container figure figcaption {
+  
+    h3 {
       background-color: #000;
       color: #fff;
-      padding: 5px;
+      padding: 10px;
+      margin: 0;
+
     }
-   
   </style>
 </head>
 
 <body>
   <h1>가로 세로 비율을 유지하는 반응형 박스</h1>
 
-  <div class="container">
-    <figure>
+  <ul class="gallery">
+    <li>
       <img src="https://placehold.co/300x200/007F73/fff?text=img1&font=PTSans">
-      <figcaption>title1</figcaption>
-     </figure>
- 
-     <figure>
+      <h3>title1</h3>
+    </li>
+    <li>
       <img src="https://placehold.co/300x200/A8CD9F/fff?text=img2&font=Roboto">
-      <figcaption>title2</figcaption>
-     </figure>
- 
-     <figure>
+      <h3>title2</h3>
+    </li>
+    <li>
       <img src="https://placehold.co/300x200/8C6A5D/fff?text=img3&font=Oswald">
-      <figcaption>title3</figcaption>
-     </figure>
- 
-     <figure>
+      <h3>title3</h3>
+    </li>
+    <li>
       <img src="https://placehold.co/300x200/FDA403/fff?text=img4&font=Lora">
-      <figcaption>title4</figcaption>
-     </figure>
-
-     <figure>
+      <h3>title4</h3>
+    </li>
+    <li>
       <img src="https://placehold.co/300x200/8C6A5D/fff?text=img5&font=Oswald">
-      <figcaption>title5</figcaption>
-     </figure>
- 
-     <figure>
+      <h3>title5</h3>
+    </li>
+    <li>
       <img src="https://placehold.co/300x200/FDA403/fff?text=img4&font=Lora">
-      <figcaption>title6</figcaption>
-     </figure>
+      <h3>title6</h3>
+    </li>
+  </ul>
 
-  </div>
 </body>
 </html>
