@@ -10,7 +10,7 @@
       display: flex;
       justify-content: center;
     }
-    .gnb {
+    /* .gnb {
       list-style: none;  
       padding: 0;
       width: 80%;
@@ -51,7 +51,97 @@
     li:nth-child(even) {
       background-color: #ACE2E1;
     }
+     */
+
+    .gnb {
+      text-align: center;
+      list-style: none;
+      padding: 0; margin: 30px auto;
+      font-size: 1.2rem;
+      font-weight: bold;
+      width: 90vw;
+      /* background-color: #dd0; */
+      
+      display: flex;
+      /* justify-content: center; */
+    }
+    .gnb li {
+      width: 11.1111%;
+    }
+    .gnb li a {
+      text-decoration: none;
+      color: inherit;
+      /* background-color: #ddd; */
+      /* display: block;
+      line-height: 50px; */
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .gnb li:first-child a {/* 첫번째 자식 li의 a */
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      background-color: #ACE2E1;
+    }
+    .gnb li:last-child a {/* 마지막 자식 li의 a */
+      background-color: #ACE2E1;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+    .gnb li:nth-child(even) a {
+      background-color: #EABE6C;
+    }
+    .gnb li:nth-child(4n+1) a {
+      background-color: #ACE2E1;
+    }
+    .gnb li:nth-child(4n+3) a {
+      background-color: #535C91;
+    }
+
+
+    /*  
+    .gnb li:nth-child(5) a {
+      background-color: #ACE2E1;
+    }
+    li:nth-child(odd) a {
+      background-color: #535C91;
+    } */
+
+
+
+    .gnb li a:hover {
+      background-color: #9F70FD;
+      color: #fff;
+    }
+
+
+/* 
     
+    .gnb a:first-child {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+    ul li:first-child {
+      background-color: #EABE6C;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+    ul li:last-child {
+      background-color: #EABE6C;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    ul li:nth-child(5) {
+      background-color: #EABE6C;
+    }
+    li:nth-child(odd) {
+      background-color: bisque;
+    }
+    li:nth-child(even) {
+      background-color: #ACE2E1;
+    }
+     */
   </style>
 </head>
 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>backgroundMulti</title>
+  <style>
+    body {
+      text-align: center;
+
+      /* 중첩은 쉼표로 구분. 먼저 작성된 값이 위에 보여짐    
+      background-color: #ddd;
+      background-image: url(./assets/images/wednesday.png), url(./assets/images/more-leaves.png);
+      background-repeat: no-repeat, repeat;
+      background-position: 50%;
+      background-size: 400px auto;
+      background-attachment: fixed, scroll; 
+      */
+      background:
+      url(./assets/images/wednesday.png) fixed no-repeat 50% / 400px,
+      url(./assets/images/more-leaves.png);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>배경중첩</h1>
+</body>
+</html>
