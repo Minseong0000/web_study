@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>bgEx</title>
+  <style>
+  
+    /* fieldset {
+      display: flex;
+      flex-flow: column;
+      width: 600px;
+      margin: 50px auto;
+      padding: 60px;
+      border-radius: 20px;
+      box-sizing: border-box;
+      border: 3px #000 solid;
+    }
+    input {
+      margin: 3px;
+      border-radius: 30px;
+      padding: 10px;
+      padding-left: 50px;
+      border: solid 1px #000;
+
+      background-repeat: no-repeat;
+      background-position: 5%;
+      background-size: 20px;
+      outline: none;
+      
+    }
+    ::placeholder {
+      color: red;
+    }
+    input:hover {
+      background-color: #DDDDDD;
+      outline: none;
+    }
+    #user_name {
+      background-image: url(../images/user-solid.svg);
+    }
+    #user_email {
+      background-image: url(../images/envelope-solid.svg);
+    }
+    #user_contact {
+      background-image: url(../images/mobile-solid.svg);
+    } */
+
+    form {
+      border: 3px solid #000;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 50px;
+      min-width: 300px;/* 300px 이하로 줄어들지 말아라 */
+      max-width: 500px;/* 500px 이상으로 커지지 말아라 */
+
+      /* display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; */
+    }
+    form input {
+      outline: none;
+      display: block;
+      margin: 10px auto;
+      width: 80%;
+      border: 1px solid #000;
+      border-radius: 50px;
+      /* padding: 10px 10px 10px 50px;
+      box-sizing: border-box; */
+      padding: 10px;
+      text-indent: 40px;/* 들여쓰기 */
+      font-size: 1.1rem;
+
+      /* background-repeat: no-repeat;
+      background-size: 20px;
+      background-position: 20px 50%; */
+      background: no-repeat 20px 50% / 20px;
+    }
+    form input::placeholder {
+      color: #EFBC9B;
+      
+    }
+    form input:hover, form input:focus {
+      background-color: #FBF3D5;
+    }
+    [autofocus] {
+      background-image: url(../images/user-solid.svg);
+    } 
+    form input[type="email"] {
+      background-image: url(../images/envelope-solid.svg);
+    }
+    [name=userTel] {
+      background-image: url(../images/mobile-solid.svg);
+    }
+  </style>
+</head>
+
+<body>
+
+  <form>
+      <input type="text" name="userName" id="user_name" placeholder="이름을 입력하세요" autofocus>
+      <input type="email" name="userEmail" id="user_email" placeholder="이메일을 입력하세요">
+      <input type="tel" name="userTel" id="user_contact" placeholder="연락처를 입력하세요">
+  </form>
+</body>
+</html>

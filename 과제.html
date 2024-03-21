@@ -16,6 +16,7 @@
     }
     header {
       background-color: #B47B84;
+      height: 110px;
     }
     header h1 {
       margin: 0;
@@ -23,8 +24,7 @@
     header p {
       margin: 0;
     }
-
-
+    
     nav {
       background-color: #EFF396;
     }
@@ -34,14 +34,93 @@
       padding: 0;
       margin: 0;
     }
-    article {
-      background-color: #FEFBF6;
+    nav .wrapper li {
+      display: inline-block;
     }
+    nav .wrapper li a {
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+      color: #fff;
+      display: block;
+
+      width: 80px;
+      line-height: 20px;
+      padding: 10px;
+    }
+
+    main {
+      background-color: #FEFBF6;
+      display: flex;
+      height: 510px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 550px;
+    }
+    h3 {
+      margin-top: 25px;
+    }
+    h4 {
+      color: red;
+    }
+    p {
+      margin: 0;
+      font-size: 13px;
+      box-sizing: border-box;
+      padding-right: 16px;
+    }
+    .vegetarian {
+      display: flex;
+    }
+    .sauce {
+      display: flex;
+    }
+    article > .salad {
+      border: 1px solid #E493B3;
+      width: 250px; height: 195px; 
+      margin: 20px;
+      
+    }
+    img {
+      width: 250px; height: 170px;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+    figcaption {
+      display: flex;
+      justify-content: flex-end;
+    }
+    article .sauces {
+      border: 1px solid #E493B3;
+      width: 250px; height: 195px;
+      margin: 20px;
+    }
+    article {
+      background-color: #FEFBF6;     
+    }
+
     aside {
       background-color: #FFF7F1;
+      width: 230px;
+      border-left: 1px solid red;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 20px;
+    }
+    .cook li {
+      border-bottom: 1px solid red;
+      padding: 0;
+    }
+    h2 {
+      color: red;
     }
     footer {
       background-color: #B47B84;
+      height: 20px;
     }
   </style>
 </head>
@@ -63,14 +142,48 @@
   </nav>
 
   <main>
-    <article>
-      <h2>채식주의자</h2>
+   <div class="container">
+    <article class="vegetarian">
+      <figure class="salad">
+        <img src="./240320_html/assets/images/채식.jfif">
+        <figcaption>Oriental Salad</figcaption>
+      </figure>
+
+     <div class="explanation">
+      <h3>채식주의자</h3>
+      <h4>런던에서의 5주 코스</h4>
+      <p>5주간 채식주의자 음식에 대해 소개하고 쌀과 국수 요리를 가르친다</p>
+     </div>
     </article>
 
+    <article class="sauce">
+      <figure class="sauces">
+        <img src="./240320_html/assets/images/소스.jfif">
+        <figcaption>Sauce</figcaption>
+      </figure>
+
+      <div class="soysauce">
+        <h3>소스 마스터클래스</h3>
+        <h4>1일 워크샵</h4>
+        <p>1일 집중 코스에서는 다양한 요리에서 사용할 수 있는 가장 맛있는 소스를 만드는 방법을 찾아본다</p>
+      </div> 
+    </article>
+   </div>
     <aside>
      <h2>인기요리법</h2>
-     </aside>
-  </main>   
+     <ul class="cook">
+      <li>후라이드</li>
+      <li>고추바사삭</li>
+      <li>양념치킨</li>
+      <li>뿌링클</li>
+     </ul>
+     <h2>연락처</h2>
+     <p>경기 수원시 팔다구 매산동</p>
+    </aside>
+  </main> 
+
+    
+ 
 
   <footer>
     <p>Kim's Kitchen 김씨네 키친</p>
