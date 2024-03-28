@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>positionEx4</title>
+  <link rel="stylesheet" href="../assets/style/minireset.min.css">
+  <style>
+    body {
+      color: #fff;
+      font-size: 1.4rem;
+      
+    }
+
+    header, footer {
+      background-color: #0C359E;
+      height: 100px;     
+    }
+    
+    main {
+      display: flex;
+    }
+    main .contents {
+      background-color: #FEECE2;
+      flex-grow: 3;
+      height: 300vh;
+      padding: 20px;
+    }
+    main aside {
+      background-color: #FFBE98;
+      flex-grow: 1;
+      height: 30vh;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>positionEx4</h1>
+    <h2>header</h2>
+  </header>
+
+  <main>
+    <div class="contents">
+      <h2>main contents</h2>
+    </div>
+    <aside>
+      <h2>sticky sidebar</h2>
+    </aside>
+  </main>
+
+  <footer>
+    <h2>footer</h2>
+  </footer>
+</body>
+</html>

@@ -21,22 +21,8 @@ body {
 /***** container  *****/
 .container {
   border: 4px solid #eeb0b0;
-  width: 940px;
+  max-width: 48.958vw; 
+  min-width: 940px; /* 940/1920 */
   margin: 20px auto;
   background-color: #fff;
 }
-/***** header  *****/
-
-/***** contents  *****/
-/***** footer  *****/
-
-
-
-
-
-
-
-
-
-
-
