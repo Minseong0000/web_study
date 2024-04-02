@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+body {
+ 
+  font-family: 'SpoqaHanSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', '맑은 고딕', 돋움, sans-serif; 
+  font-weight: 400;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+main {
+  height: 300vh;
+  font-weight: 700;
+  font-size: 4rem;
+  margin-top: 100px;
+}
+h1 {
+  background-color: blue;
+  color: #fff;
+  height: 100px;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 대메뉴 */
+.main-menu {
+  position: sticky;
+  top: 0;
+  background-color: #EFBC9B;
+  color: #fff;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+}
+.main-menu li {
+  width: 150px;
+}
+.main-menu > li > a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+
+  border-right: 1px solid #fff;
+}
+
+.main-menu li:last-child a {
+  border-right: none;
+}
+.main-menu > li > a:hover {
+  background-color: #9CAFAA;
+  color: #FF5BAE;
+}
+
+/* 각 각의 소메뉴 */
+.main-menu li .sub-menu {
+  display: none;
+}
+
+/* 각 대메뉴에 마우스를 올리면, 해당 대메뉴의 소메뉴가 나타남 */
+
+.main-menu li .sub-menu a {
+  display: block;
+  background-color: blue;
+  font-size: 1.2rem;
+  font-weight: 300;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid red;
+}
+.main-menu li .sub-menu a:hover {
+  background-color: #B3C8CF;
+}
+.main-menu li .sub-menu li:last-child a {
+  border-bottom: none;
+}
+.main-menu li:hover .sub-menu {
+  display: block;
+}

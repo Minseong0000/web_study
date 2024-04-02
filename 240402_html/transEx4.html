@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>transEx4</title>
+  <style>
+    body {
+      margin: 0 auto;
+      background-color: #F4EDCC;
+    }
+    .wrapper {
+      background-color: #fff;
+      width: 90vw;
+      margin: 0 auto;
+      box-shadow: inset;
+
+      position: relative;
+    }
+    .wrapper h1 {
+      position: relative;
+      left: 40px; top: 10px;
+      border-bottom: solid 1px #000;
+      width: 40%;
+    }
+    .contents {
+      width: 40%;
+      margin-left: 40px;
+    }
+    .contents img {
+      width: 20px; height: 20px;
+      margin: 5px;
+    }
+    .photo img {
+      width: 40%; height: 100%;
+      position: absolute;
+      right: 0; top: 0;
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+
+      transition-duration: 1s;
+    }
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 5px 40px;
+    }
+    .wrapper:hover .photo img {
+      transform: translateX(-10%);
+    }
+  
+  </style>
+</head>
+
+<body>
+  <!-- 박스 위에 마우스를 올리면 왼쪽 이미지 좌측으로 조금 움직임 -->
+  <div class="wrapper">
+    <h1>Name</h1>
+
+    <section class="contents">
+      <p>이름자 둘 이런 하나에 이름 자를 계십니다. 이름과 잠, 별 많은 이네들은</p>
+      <img src="../assets/images/house-solid.svg" alt="house icon">
+      <img src="../assets/images/envelope-solid.svg" alt="envelop icon">
+      <img src="../assets/images/mobile-solid.svg" alt="mobile icon">
+    </section>
+     
+    <article class="photo">
+        <img src="../assets/images/총쏘는사진.png" alt="총쏘는 모습">
+    </article>
+
+    <footer>profile</footer>    
+  </div>
+
+</body>
+</html>

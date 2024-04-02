@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>transition-delay</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+    .container {
+      list-style: none;
+      padding: 0;
+      border: 3px solid #000;
+      margin: 0 auto;
+      width: 90vw;     
+      height: 70vh;
+      font-weight: bold;
+      font-size: 1.4rem;
+
+      display: flex;
+      justify-content: space-evenly;
+
+      
+    }
+    .container li {
+      text-align: center;
+      background-color: #ddd;
+      height: 30px;
+      margin: 0.4rem;
+      width: calc(20% - 0.8rem);
+      flex-shrink: 0;
+      /* flex-grow: 1;
+      flex-basis: 100px; */
+
+      transition-property: all;
+      transition-duration: 1s;
+    }
+
+    .container:hover li:first-child {
+      background-color: #F1EEDC;
+      height: calc(100% - 0.8rem);
+    }
+    .container:hover li:nth-child(2) {
+      background-color: #C0D6E8;
+      height: calc(100% - 0.8rem);
+      transition-delay: 0.5s;
+    }
+    .container:hover li:nth-child(3) {
+      background-color: #DBAFA0;
+      height: calc(100% - 0.8rem);
+      transition-delay: 1s;
+    }
+    .container:hover li:nth-child(4) {
+      background-color: #C08B5C;
+      height:calc(100% - 0.8rem);
+      transition-delay: 2s;
+    }
+    .container:hover li:last-child {
+      background-color: #FFC94A;
+      height: calc(100% - 0.8rem);
+      transition-delay: 3s;
+    }
+
+
+
+
+
+    /* .container li:first-child:hover {
+      background-color: #F1EEDC;
+      height: calc(70vh - 30px);
+    }
+    .container li:nth-child(2):hover {
+      background-color: #C0D6E8;
+      height: calc(70vh - 30px);
+    }
+    .container li:nth-child(3):hover {
+      background-color: #DBAFA0;
+      height: calc(70vh - 30px);
+    }
+    .container li:nth-child(4):hover {
+      background-color: #C08B5C;
+      height: calc(70vh - 30px);
+    }
+    .container li:last-child:hover {
+      background-color: #FFC94A;
+      height: calc(70vh - 30px);
+    } */
+  </style>
+</head>
+
+<body>
+  <h1>transition-delay</h1>
+  <ul class="container">
+    <li>바로진행</li>
+    <li>0.5초</li>
+    <li>1초</li>
+    <li>2초</li>
+    <li>3초</li>
+  </ul>
+</body>
+</html>

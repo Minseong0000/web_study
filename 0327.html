@@ -1,66 +1,75 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8">
   <title>flexEx6</title>
   <style>
-   body {
-   margin:0;
-   text-align: center;
-   }
-   h2 {
-   background-color: orange;
-   margin:0;
-   position: sticky;
-   top:0;
-   text-align: center;
-   text-decoration: uppercase;
-   width: 50%;
-   padding: 20px;
-   margin: 0 auto;
-   border-bottom-right-radius: 20px;
-   border-bottom-left-radius: 20px;
-   }
-   .title {
-    height: 100vh;
-    background-size: cover;
-    background-attachment: fixed;
-   }
-   .title1 {
-    background-image: url(./assets/images/멀뚱오리.png);
-    
-   }
-   .title2 {
-    background-image: url(./assets/images/멍때리는참새.jfif);
-   }
-   .title3 {
-    background-image: url(./assets/images/소스.jfif);
-   }
-   .title4 {
-    background-image: url(./assets/images/채식.jfif);
-   }
+
+    body {
+      margin: 0;
+      text-align: center;
+      text-transform: capitalize;
+    }
+        
+    h2 {
+      background-color: orange;
+      color: #fff;
+      
+      width: 50%;
+      padding: 10px 0;
+      margin: 0 auto;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    div {
+      height: 100vh; width: 100%;
+      background: no-repeat 50% / cover;
+      background-attachment: fixed;
+      
+      position: sticky;
+      top: 0;
+    }
+
+    .title1 {
+      background-image: url(https://picsum.photos/id/76/1200/800);
+
+    }
+
+    .title2 {
+      background-image: url(https://picsum.photos/1200/800?grayscale);
+    }
+
+    .title3 {
+      background-image: url(https://picsum.photos/id/237/1200/800);
+    }
+
+    .title4 {
+      background-image: url(https://picsum.photos/seed/picsum/1200/800);
+    }
+
   </style>
 </head>
 
 <body>
- <div class="title title1">
-  <h2>title1</h2>
- </div>
 
- <div class="title title2">
-  <h2>title2</h2>
- </div>
- 
- <div class="title title3">
-  <h2>title3</h2>
- </div>
- 
- <div class="title title4">
-  <h2>title4</h2>
- </div>
+  <div class="title title1">
+    <h2>title1</h2>
+  </div>
 
+  <div class="title title2">
+    <h2>title2</h2>
+  </div>
 
+  <div class="title title3">
+    <h2>title3</h2>
+  </div>
 
+  <div class="title title4">
+    <h2>title4</h2>
+  </div>
 
 </body>
+
 </html>
