@@ -13,13 +13,14 @@
       width: 100vw;
       height: 100vh;
       position: relative;
+      margin-bottom: 100px;
     }
 
     .wrapper video {
       width: 100%;
       height: 100%;
       object-fit: fill;
-      /* display: none; */
+      
     }
 
     .container {
@@ -44,16 +45,18 @@
     }
     .container .menu1 {
       margin-left: 200px;
+      
     }
     .container .menu1 a {
       display: block;
       padding: 40px;
-      
+      font-size: 1.1rem;
     }
     .container .menu2 {
       line-height: 98px;     
       position: absolute;
       right: 65px;
+      
     }
     .container .menu2 a {
       display: block;
@@ -67,6 +70,100 @@
     .container .menu2 .e-shipping img {
       height: 15px; width: 15px;
       object-fit: contain;
+      color: #fff;
+      
+    }
+
+    .textbox1 {
+      text-align: center;
+      padding-bottom: 50px;
+    }
+    .textbox1 h2 {
+      font-size: 3rem;
+      margin: 10px;
+    }
+
+    .textbox1>p:first-child {
+      color: orange;
+      font-size: 1.5rem;
+    }
+
+    .introduction {
+      display: flex;
+      text-align: center;
+      position: relative;
+      justify-content: center;
+      margin-bottom: 100px;
+    }
+    .introduction img {
+      width: 30px; height: 30px;
+      margin-bottom: 40px;
+      transform: translateY(-60px);
+    }
+    .introduction .calender {
+      padding: 5%;
+    }
+    .introduction .user {
+      border-right: 1px solid rgb(128, 128, 128, 0.3);
+      border-left: 1px solid rgb(128, 128, 128, 0.3);
+      padding: 5%;
+    }
+    .introduction .clock {
+      border-right: 1px solid rgb(128, 128, 128, 0.3);
+      padding: 5%;
+    }
+    .introduction .ship {
+      padding: 5%;
+    }
+    .introduction .number {
+      font-size: 60px;
+    }
+    .introduction .blue {
+      color: navy;
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+    .menu {
+          padding: 5px;
+          background-color: #ddd;
+          width: 50%; 
+    }
+    .menu .nav {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      width: 80%;
+      justify-content: space-around;
+    }
+
+    .menu .nav a {
+      text-decoration: none;
+      color: #000;
+      margin: 5px;
+      font-size: 11px;
+      
+    }
+    .business {
+      text-align: center;
+    }
+    .business>p:first-child {
+      color: orange;
+      font-size: 1.5rem;
+    }
+    .business h2 {
+      font-size: 3rem;
+      margin: 10px;
+    }
+    .map {
+      width: 100%; height: 50vh;
+      background-color: yellow;
+    }
+    .map p {
+      color: red;
+      line-height: 50vh;
+      text-align: center;
+      font-size: 3rem;
+
     }
   </style>
 </head>
@@ -96,6 +193,68 @@
       <li><a href="#">KOR</a></li>
      </ul>
   </div>
+
+  <main>
+    <section>
+      <div class="textbox1">
+        <p>/</p>
+        <h2>At a Glance</h2>
+        <p>해운과 물류를 넘어 네트워크를 통해 새로운 가치를 창조해 가는 팬스타<br>
+          팬스타의 도전과 혁신은 오늘도 계속되고 있습니다.</p>
+      </div>
+
+      <div class="introduction">
+        <div class="calender">
+          <img src="../assets/panstar-image/calender.png" alt="시계">
+          <p><strong class="number">33</strong>years</p>
+          <p class="blue">팬스타 창립 33주년</p>
+          <p>SINCE 1990. 07. 12</p>
+        </div>
+        <div class="user">
+          <img src="../assets/panstar-image/user.png" alt="유저">
+          <p><strong class="number">1,525,241</strong>명</p>
+          <p class="blue">팬스타 오사카 크루즈페리</p>
+          <p>부산-오사카 총 승객수</p>
+        </div>
+        <div class="clock">
+          <img src="../assets/panstar-image/시계.png" alt="시계">
+          <p><strong class="number">40</strong>hours</p>
+          <p class="blue">팬스타코리아랜드브릿지</p>
+          <p>한-중-일 리드타임</p>
+        </div>
+        <div class="ship">
+          <img src="../assets/panstar-image/ship.png" alt="배">
+          <p><strong class="number">439</strong>항차</p>
+          <p class="blue">연안 & 국제 크루즈</p>
+          <p>정통 크루즈 운항 횟수</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="business">
+      <p>/</p>
+      <h2>Business Area</h2>
+      <p>팬스타는 무한한 가능성의 바다에서 최초의 길을 만들어 왔습니다<br>
+        그리고 이제 고객을 위한 최고를 만들어 갑니다.</p>
+
+      <div class="menu">
+        <ul class="nav">
+          <li><a href="#">고속화물페리</a></li>
+          <li><a href="#">크루즈여객</a></li>
+          <li><a href="#">국제특송</a></li>
+          <li><a href="#">자동차정비기기</a></li>
+          <li><a href="#">친환경 선박기술</a></li>
+          <li><a href="#">창고보관</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="way">
+      <div class="map">
+        <p>kakao map</p>
+      </div>
+    </section>
+  </main>
 
 
 </body>
