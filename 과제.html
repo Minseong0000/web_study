@@ -5,76 +5,81 @@
   <title>assignment</title>
   <style>
     body {
-      background: url(./240320_html/assets/images/webEx.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-
-      border: solid 3px #E493B3;
-      width: 780px; height: 680px;
-      margin: 20px auto;
-    }
-    header {
-      background-color: #B47B84;
-    }
-    header h1 {
       margin: 0;
+      background-color: antiquewhite;
     }
-    header p {
-      margin: 0;
+    .wrapper {
+      background-color: #fff;
+      width: 70vw; height: 40vh;
+      margin: 50px auto;
+      position: relative;
+      overflow: hidden;
+      
     }
-
-
-    nav {
-      background-color: #EFF396;
+    .wrapper h1 {
+      width: 40%;
+      border-bottom: 1px solid #000;
+      position: relative;
+      left: 30px;
+      top:  10px;
     }
-    nav .wrapper {
-      list-style: none;
+    .wrapper p {
+      position: relative;
+      left: 30px;
+      top: 20px;
+    }
+    .icon {
+      position: relative;
+      left: 30px;
+      top: 70px;
+      width: 20px; height: 20px;
       display: flex;
-      padding: 0;
-      margin: 0;
-    }
-    article {
-      background-color: #FEFBF6;
-    }
-    aside {
-      background-color: #FFF7F1;
+      margin: 5px;
     }
     footer {
-      background-color: #B47B84;
+      position: absolute;
+      bottom: 0;
+      padding: 10px;
+      background-color: #000;
+      width: 100%;
+      color: #fff;
+    }
+    .photo {
+      width: 40%;
+      height: 100%;
+
+      position: relative;     
+      left: 500px;
+      bottom: 150px;
+
+      border-top-left-radius: 40%;
+      border-bottom-left-radius: 40%;
+
+  
+    }
+    .wrapper:hover .photo {
+      transform: translateX(-10px);
     }
   </style>
 </head>
 
 <body>
-  <header class="header">
-    <h1>Kim's kitchen</h1>
-    <p>Cooking Class</p>
-  </header>
+  <div class="wrapper">
+    <h1>Name</h1>
+    <p>고양이가 너무 귀엽지 않습니까?</p>
 
-  <nav class="menu">
-    <ul class="wrapper">
-      <li><a href="#">홈</a></li>
-      <li><a href="#">소개</a></li>
-      <li><a href="#">교실</a></li>
-      <li><a href="#">케이터링</a></li>
-      <li><a href="#">연락처</a></li>
-    </ul>
-  </nav>
+    <section class="icon">
+      <img src="./images/envelope-solid.svg" alt="아이콘">
+      <img src="./images/house-solid.svg" alt="아이콘">
+      <img src="./images/user-solid.svg" alt="아이콘">
+    </section>
 
-  <main>
-    <article>
-      <h2>채식주의자</h2>
-    </article>
+    <footer>
+      profile
+    </footer> 
 
-    <aside>
-     <h2>인기요리법</h2>
-     </aside>
-  </main>   
 
-  <footer>
-    <p>Kim's Kitchen 김씨네 키친</p>
-  </footer>
-  
+    <img src="./images/500492c75cdf421bbd8ad6429a7a2a39.jpg" alt="cat" class="photo">
+  </div>
 </body>
 </html>
