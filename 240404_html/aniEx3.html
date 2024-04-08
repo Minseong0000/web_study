@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>aniEx3</title>
+  <style>
+    body {
+      margin: 0;
+      
+    }
+    .container {
+      height: 100vh;
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+      
+    }
+    .container .bicycle-wrapper {
+      animation: move 4s infinite linear;
+
+      position: relative;
+      z-index: 99;
+    }
+    .container .bicycle-wrapper .bicycle-wheel {
+      position: absolute;
+      bottom: -89px; left: -91px;
+      /* transform: translate(-50%, 50%); */
+
+      animation: spin infinite 1s linear;
+    }
+    .container .bicycle-wrapper .bicycle-wheel:last-child {
+      left: auto;/* 기존 left 무력화 */
+      right: -93px;
+    }
+
+    .container .fireworks {
+      /* align-self: flex-start; */
+      margin: 20px 20px auto auto;
+      animation: scale 3s infinite alternate;
+    }
+
+    @keyframes scale {
+      0% { opacity: 0; }
+      100% { transform: rotate(360deg) scale(0.5); opacity: 1; }
+    }
+    @keyframes spin {
+      100% {transform: rotate(360deg);}
+    }
+    @keyframes move {
+      0% { opacity: 0; left: -10%;}
+      10% { opacity: 1; left: 0%; }
+      80% { opacity: 1; left: 100%; }
+      100% { opacity: 0; left: 110%; }
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="bicycle-wrapper">
+      <img src="../assets/images/bicycle.png" alt="자전거 바디" class="bicycle-body">
+      <img src="../assets/images/wheel.png" alt="자전거 바퀴" class="bicycle-wheel">
+      <img src="../assets/images/wheel.png" alt="자전거 바퀴" class="bicycle-wheel">
+    </div>
+    <img src="../assets/images/fireworks.png" alt="불꽃놀이 일러스트" class="fireworks">
+  </div>
+  
+</body>
+</html>
