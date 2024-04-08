@@ -1,0 +1,22 @@
+@charset 'utf-8';
+
+@keyframes ani1 {
+  100% {
+    background-image: linear-gradient(#49243E, #A79277);
+    margin-left: 70vw;/* 레이아웃에 영향을 줌 */
+    transform: rotate(360deg);
+  }
+}
+@keyframes ani2 {
+  100% {
+    background-image: linear-gradient(#49243E, #A79277);
+    transform: rotate(360deg);
+    left: 80%;
+  }
+}
+@keyframes ani3 {
+  100% {
+    background-image: linear-gradient(#49243E, #A79277);
+    transform: translateX(calc(100vw - 200px)) rotate(360deg);
+  }
+}

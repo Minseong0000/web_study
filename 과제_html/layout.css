@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/***** contents  *****/
+.container .contents  {
+  display: flex;
+}
+.container .contents article {
+  background-color: #f1eee9;
+  width: 648px;
+  width: 69.528%;/* 648/932*100=69.528 */
+  padding: 30px 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .contents article figure {
+  background-color: #fff;
+  border: 1px solid #e4010b;
+  text-align: right;
+  color: #9f9b9c;
+  font-style: italic;
+  font-size: 14px;
+  padding: 8px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+.container .contents article figure figcaption{
+  margin-top: 8px;
+}
+.container .contents article img {
+  width: 250px; height: 200px;
+}
+.container .contents article .txt_wrapper {
+  width: 280px;
+}
+.container .contents article .txt_wrapper h2 {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.container .contents article .txt_wrapper h3 {
+  font-weight: 500;
+  color: #e4010b;
+  margin: 5px 0;
+}
+.container .contents aside {
+
+  background-color: #eeb0b0;
+  width: 284px;
+  flex-grow: 1;
+}
+.container .contents aside h2 {
+  color: #e4010b;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 30px 28px;  
+}
+.container .contents aside .recipe a {
+  display: block;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #e4010b;
+  text-indent: 20px;
+  height: 60px;
+  line-height: 60px;
+}
+.container .contents aside .recipe li a:hover {
+  background-color: #e4010b;
+  color: #fff;
+}
+
+.container .contents aside address {
+  font-weight: 500;
+  font-style: normal;
+  padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+

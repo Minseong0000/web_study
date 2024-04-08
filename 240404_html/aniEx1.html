@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>aniEx1</title>
+  <style>
+    body {
+      margin: 0;
+      background-image: linear-gradient(-125deg, #A34343 10%, #BED7DC 40%,#FFC94A);
+      background-size: 400%;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+      animation: ani1 10s infinite ease-in-out alternate;
+    }
+    .btn {
+      text-decoration: none;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: bold;
+      border: 6px solid #fff;
+      padding: 10px 30px;
+      transition: .3s;
+
+
+      /* position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%); */
+
+      
+
+    }
+    .btn:hover {
+      border-radius: 40px;
+    }
+
+    @keyframes ani1 {
+      30% {
+        background-position: 0 50%;
+      }
+      60% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0 30%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#" class="btn">aniEx1</a>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>aniShorthand</title>
+  <link rel="stylesheet" href="./animation.css">
+  <style>
+    body {
+      margin: 0;
+    }
+    .wrapper {
+      font-weight: bold;
+      font-size: 1.3rem;
+      width: 100%;
+      display: flex;
+
+      position: relative;
+    }
+    .block {
+      background-color: darkgreen;
+      width: 200px; height: 100px;
+      color: #fff;
+    }
+    .box {
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 100px;
+      background-image: linear-gradient(blue, black);
+      color: #fff;
+
+      /* animation-name: ani2;
+      animation-duration: 2s;
+      animation-delay: 0.5s;
+      animation-timing-function: cubic-bezier(.42,1.51,.97,.34);
+      animation-fill-mode: forwards;
+      animation-iteration-count: 3;
+      animation-direction: alternate;
+
+      position: absolute;
+      left: 0; */
+
+      /* 순서에 상관없이 띄어쓰기로 구분. 두번째 나오는 s는 대기 시간으로 생략 가능 */
+      animation: ani3 2s .5s 3 ease alternate forwards;
+    }
+    .box:hover {
+      animation-play-state: paused;/* 일시멈춤 */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>animation 축약형</h1>
+  <div class="wrapper">
+    <div class="box">
+      <p>축약형</p>
+    </div>
+    <div class="block">block</div>
+  </div>
+</body>
+</html>

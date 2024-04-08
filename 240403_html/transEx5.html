@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>transEx5</title>
+  <!-- <link rel="stylesheet" href="../assets/style/minireset.min.css"> -->
+  <style>
+    h1 {
+      text-align: center;
+    }
+    .products {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      border: 3px solid #444;
+
+      display: flex;
+      width: 80vw;
+      max-width: 1200px;
+      background-color: #ddd;
+    }
+    .products .item {
+      /* flex-basis: 33.3333%; */
+      /* width: 33.3333%; */
+      width: calc(33.3333% - 2vw);
+      margin: 1vw;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+    }
+    .products .item img {
+      width: 100%;
+      display: block;
+    }
+    .products .item .txt-box {
+      background-color: rgb(0, 0, 0, 0.8);
+      color: #fff;
+      transition: 0.3s;
+      padding: 1vw;
+      aspect-ratio: 1 / 1;
+    }
+    .products .item:hover .txt-box {
+      transform: translateY(-100%);
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>transEx5</h1>
+  <ul class="products">
+    <li class="item">
+      <img src="../assets/images/shoes1.jpg" alt="shoes1">
+      <div class="txt-box">
+        <h3>조던 1 하이 (little kids)</h3>
+        <p class="desc">지난번에 기회를 놓쳤어도 걱정하지 마세요</p>
+        <p class="price">가격: 109,000원</p>
+      </div>
+    </li>
+    <li class="item">
+      <img src="../assets/images/shoes2.jpg" alt="shoes2">
+      <div class="txt-box">
+        <h3>나이키 덩크 로우 레트로</h3>
+        <p class="desc">지난번에 기회를 놓쳤어도 걱정하지 마세요</p>
+        <p class="price">가격: 129,000원</p>
+      </div>
+    </li>
+    <li class="item">
+      <img src="../assets/images/shoes3.jpg" alt="shoes3">
+      <div class="txt-box">
+        <h3>나이키 인빈서블 3</h3>
+        <p class="desc">지난번에 기회를 놓쳤어도 걱정하지 마세요</p>
+        <p class="price">가격: 209,000원</p>
+      </div>
+    </li>
+  </ul>
+</body>
+</html>
