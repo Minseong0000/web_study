@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+/* "Play", sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+/* 'Pretendard', san-serif */
+@import url(./pretendard-subset.css);
+
+body {
+  font-family: "Pretendard", sans-serif;
+}
