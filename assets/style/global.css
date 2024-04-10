@@ -51,12 +51,22 @@ body {
   margin: 0 auto;
   color: #777;
 }
-.ghost-btn {
-  border: 3px solid #fff;
-}
+
 .more-btn {
+  transition: .3s;
   background-color: #f18d00;
   color: #fff;
+  text-transform: capitalize;
+  position: absolute;
+  padding: 10px 30px;
+}
+.more-btn:hover {
+  border-radius: 30px;
+}
+
+/***** article *****/
+article:not(:nth-of-type(1)) {
+  padding-top: 170px;
 }
 
 /***** header *****/
@@ -66,6 +76,7 @@ header {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
+  z-index: 9999;
 }
 header .header-wrapper{
   /* background-color: orange; */
@@ -148,3 +159,37 @@ header .header-wrapper .global-utill li:not(:first-child) a::after {
   border: none;
 } */
 /***** footer *****/
+footer {
+  background-color: #2a2a2a;
+  color: #fff;
+  margin-top: 110px;
+}
+footer .footer-banner {
+  background-color: #ddd;
+  padding: 30px 0;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+footer .footer-bottom {
+  max-width: 1600px;
+  margin: 0 auto;
+  font-size: 12px;
+  padding: 0;
+}
+footer .footer-bottom > .flex-wrapper {
+  align-items: ;
+}
+
+footer .footer-bottom h2 {
+  background: url(../panstar-images/ft_logo.png) no-repeat 0 50% / contain;
+  filter: grayscale(100%) contrast(20%);
+  /* css filter filter https://developer.mozilla.org/ko/docs/Web/CSS/filter */
+  text-indent: -9999px;
+  width: 300px;
+  height: 40px;
+}
+footer .footer-banner li {}
+footer .footer-banner li a {}
+footer .footer-bottom .footer-utill {}
+footer .footer-bottom address {}
+footer .footer-bottom p {}

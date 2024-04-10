@@ -77,6 +77,284 @@
   background-image: url(../assets/panstar-images/main_reserve_icon2_2108.png);
 }
 /* At a Glance */
+.glance {
+  
+}
+.glance .glance-list {
+  justify-content: center; 
+  max-width: 1600px;
+  margin: 70px auto 0;
+  position: relative;
+}
+.glance .glance-list li {
+  border-right: 1px solid #ddd;
+  width: 24%;
+  padding: 14px 0 50px;
+}
+.glance .glance-list li:last-child {
+  border-right: none;
+}
+.glance .glance-list li img {}
+.glance .glance-list li h3 {
+  margin: 20px 0;
+  font-family: "Play", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 300;
+}
+.glance .glance-list li h3::after {
+  content: "";
+  display: block;
+  width: 26px; height: 1px;
+  background-color: #000;
+  margin: 0 auto;
+}
+.glance .glance-list li h3 strong {
+  font-weight: 700;
+  font-size: 3rem;
+}
+.glance .glance-list li h4 {
+  color: #022974;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
 /* Business Area */
+.business {}
+.business .business-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+.business .business-wrapper .business-text-box {
+  background-color: #eee;
+  width: 50%;
+  position: relative;
+  z-index: -1;
+
+}
+.business .business-wrapper .business-text-box::after {
+  content: "";
+  background-color: #eee;
+  position: absolute;
+  width: 70px;
+  height: 100%;
+  top: 0; left: 100%;
+}
+.business .business-wrapper .business-text-box .business-menu {
+  justify-content: center;
+  /* margin: 54px 0; */
+  padding: 48px 0 40px;
+}
+.business .business-wrapper .business-text-box .business-menu a {
+  margin: 10px;
+  display: block;
+  font-weight: 600;
+  position: relative;
+}
+.business .business-wrapper .business-text-box .business-menu a.active {
+  color: #f18d00;
+}
+.business .business-wrapper .business-text-box .business-menu a.active::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #f18d00;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -10px;
+}
+.business .business-wrapper .business-text-box h3 {
+  font-size: 2rem;
+}
+.business .business-wrapper .business-text-box p {
+  color: #666;
+  width: 60%;
+  margin: 20px auto;
+}
+.business .business-wrapper .business-img-list {
+  justify-content: center;
+}
+.business .business-wrapper .business-img-list li {
+  margin: 1vw 0.5vw 5vw;
+}
+.business .business-wrapper .business-slide {
+  width: 50%;
+  margin-top: 100px;
+}
+.business .business-wrapper .business-slide img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.business .business-wrapper .more-btn {
+  position: absolute;
+  top: 50%; left: 50%; 
+  transform: translate(-50%, -50%);
+}
 /* Location */
+.location {
+  /* background: url(../assets/panstar-images/bg_worldmap.png) no-repeat 50%; */
+}
+.location .location-list {
+  justify-content: center;
+}
+.location .location-list a {
+  display: block;
+  font-weight: 700;
+  font-family: "Play", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 30px 16px;
+}
+.location .location-list a.active {
+  color: #f18d00;
+}
+.location .location-kakao {
+  background: url(../assets/panstar-images/bg_worldmap.png) no-repeat 50% 30% / contain;
+  width: 90vw;
+  margin: 0 auto;
+  aspect-ratio: 3 / 1;
+  padding: 40px 0;
+}
+.location .location-kakao #map {
+  width: 96%;
+  margin: 0 auto;
+  aspect-ratio: 3 / 1;
+  border: 1px solid #000;
+  border-radius: 30px;
+}
+.location .more-btn {
+  transform: translateX(-50%);
+}
 /* Contact Us */
+.contact .contact-wrapper {
+  justify-content: center;
+  align-items: flex-start;
+  margin: 80px auto 0;
+  max-width: 1600px; 
+  gap: 4%; 
+}
+.contact .contact-wrapper .press {
+  transition: .3s;
+  color: #fff;
+  width: 37.5%;
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.8)), url(../assets/panstar-images/kakaotalk_20240404_111543987_02.jpg) no-repeat 50% / cover;
+  align-self: stretch;
+}
+.contact .contact-wrapper .press:hover {
+  background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)), url(../assets/panstar-images/kakaotalk_20240404_111543987_02.jpg) no-repeat 50% / cover;
+}
+.contact .contact-wrapper .press h3 {
+  background-color: #f18d00;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  width: 140px;
+}
+.contact .contact-wrapper .press h4 {
+  font-size: 2.5rem;
+  margin: 36px 80px;
+  /* 한 줄 말줄임 ...
+  width: 400px;
+  text-overflow: ellipsis;
+  white-space: no-wrap;
+  overflow: hidden; */
+
+  /* 여러 줄 말줄임 */
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;/* 여러 줄일 때 텍스트를 자르는 줄 */
+  -webkit-box-orient: vertical;/* 박스 진행 방향 */
+  overflow: hidden;
+}
+.contact .contact-wrapper .press .ghost-btn {
+  border: 3px solid #fff;
+  padding: 10px 30px;
+  display: inline-block;
+  margin: 30px 0 80px;
+}
+.contact .contact-wrapper .notice {
+  width: 37.5%;
+  text-align-last: left;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px 0;
+  
+}
+.contact .contact-wrapper .recruit {
+  width: 12%
+}
+.contact .contact-wrapper .notice h3 {
+  font-weight: 700;
+  font-family: "Play", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2.4rem;
+  text-transform: capitalize;
+}
+.contact .contact-wrapper .notice .ghost-btn {
+  border: 1px solid #000;
+  padding: 10px 30px;
+  transition: .3s;
+}
+.contact .contact-wrapper .notice .ghost-btn:hover {
+  border-radius: 30px;
+}
+.contact .contact-wrapper .notice .notice-list {
+  width: 100%;
+  margin: 20px 0;
+  list-style: inside emojiM;
+  color: #999;
+
+}
+
+/* 기본 리스트 스타일 외 스타일 설정 */
+@counter-style emojiM {
+  system: cyclic;/*같은 값 반복*/
+  symbols: "-";
+  suffix: "";/* 머릿말 기호 다음 처리 방식 */
+}
+.contact .contact-wrapper .notice .notice-list li {
+  border-bottom: 1px solid #ddd;
+  padding: 14px 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact .contact-wrapper .notice .notice-list li a {  
+  width: 70%;
+  text-overflow: ellipsis;
+  white-space: no-wrap;
+  overflow: hidden;
+  display: inline-block;
+}
+.contact .contact-wrapper .notice .notice-list li::before {
+  content: "-";
+}
+.contact .contact-wrapper .notice .notice-list li a:hover {
+  text-decoration: underline;
+}
+.contact .contact-wrapper .notice .notice-list li .notice-date {
+  /* float: right; 요소의 진행 방향 설정. left, right 두값만 존재. 최근엔 잘 사용하지 않음 */
+}
+  
+
+.contact .contact-wrapper .recruit {
+  width: 20%;
+  background: url(../assets/panstar-images/bg_main_recruit.png) no-repeat 50% / cover;
+  align-self: stretch;
+  position: relative;
+}
+.contact .contact-wrapper .recruit h3 {
+  color: #f18d00;
+  font-weight: 700;
+  font-family: "Play", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-align: left;
+  padding: 20px 30px 0;
+}
+.contact .contact-wrapper .recruit p {
+  text-align: left;
+  font-size: 1.1rem;
+  padding: 0 30px;
+}
+.contact .contact-wrapper .recruit .more-btn {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+}
