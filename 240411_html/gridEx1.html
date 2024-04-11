@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>gridEx1</title>
+  <style>
+    body {
+      font-weight: bold;
+      font-size: 1.2rem;
+     }
+    .container { 
+      width: 90%; height: 50vh;
+      margin: 50px auto; 
+      border: 6px solid #000; 
+      display: grid; 
+ 
+      color: #fff;
+
+      grid-template-columns: minmax(200px, 25%)  1fr;     
+     }
+    .container .item1{
+      background-color: #5DEBD7;
+     }
+     .container .item2 {
+      background-color: #ECCA9C; 
+     }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item1">min:200px / max:25%</div>
+    <div class="item2">item2</div>
+  </div>
+  
+</body>
+</html>

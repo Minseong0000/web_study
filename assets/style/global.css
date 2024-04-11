@@ -174,7 +174,7 @@ footer .footer-bottom {
   max-width: 1600px;
   margin: 0 auto;
   font-size: 12px;
-  padding: 0;
+  padding: 50px 0;
 }
 footer .footer-bottom > .flex-wrapper {
   align-items: ;
@@ -188,8 +188,45 @@ footer .footer-bottom h2 {
   width: 300px;
   height: 40px;
 }
-footer .footer-banner li {}
-footer .footer-banner li a {}
-footer .footer-bottom .footer-utill {}
-footer .footer-bottom address {}
-footer .footer-bottom p {}
+footer .footer-bottom .footer-bottom-box {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+footer .footer-bottom .footer-utill {
+  gap: 30px;
+  font-size: 15px;
+}
+footer .footer-bottom .footer-utill a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+footer .footer-bottom address {
+  text-align: left;
+  font-style: normal;
+  line-height: 2;
+  margin: 20px 0;
+  font-size: 14px;
+  margin: 40px 0;
+  color: #979797;
+}
+footer .footer-bottom address .copyright {
+  color: #999;
+  margin-top: 30px;
+}
+footer .footer-bottom .family-site {
+  background-color: #000;
+  padding: 10px 20px;
+  width: 200px;
+  text-align: left;
+  text-transform: capitalize;
+  justify-content: space-between;
+}
+footer .footer-bottom .family-site .icon {
+  width: 10%;
+}
+footer .footer-bottom .family-site .icon svg {
+  fill: #fff;
+  transform: translateY(3px);
+
+}
