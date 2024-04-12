@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>gridEx7</title>
+  <style>
+    body {
+      margin: 10px 100px;
+      font-weight: bold;
+    }
+    .wrapper {
+      border: 1px solid #000;
+      height: 90vh;
+      box-shadow: 5px 10px blue;
+    }
+    .wrapper .header {
+      display: flex;
+      justify-content:space-around;
+      align-items: flex-end;
+      margin-top: 50px;
+      position: relative;
+      border-bottom: 1px solid #000;
+    }
+    .wrapper .header .list2 {
+      transform: translateX(-100px);
+    }
+    
+
+
+    .wrapper .box {
+      background-color: #ddd;
+      margin: 50px;
+      height: 60vh;
+      
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);     
+    } 
+    .wrapper .box .item {
+      width: 270px;
+      height: 270px;
+      border-radius: 50%;   
+
+      text-align: center;
+      line-height: 250px;
+      margin: auto auto;    
+    }
+
+    .wrapper .box .item:nth-child(odd) {
+      background-color: purple;
+    } 
+    .wrapper .box .item:nth-child(even) {
+      background-color: violet;
+    } 
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <ul class="list1">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+      </ul>
+      <ul class="list2">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+      </ul>
+      <p>경기도 수원시 팔달구 123456</p>
+    </div>
+
+    <div class="box">
+      <div class="item item1">item1</div>
+      <div class="item item2">item2</div>
+      <div class="item item3">item3</div>
+      <div class="item item4">item4</div>
+      <div class="item item5">item5</div>
+      <div class="item item6">item6</div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

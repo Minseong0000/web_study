@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>gridEx8</title>
+  <style>
+     .border-style {
+      border: 3px solid #000;
+      border-top: none;
+    }
+    .vertical-txt {
+      writing-mode: vertical-lr;/*텍스트의 진행방향의 가로, 세로 정렬*/
+      text-orientation: upright;/* writing-mode 작성시 영어의 글자 방향 */
+      letter-spacing: 10px;
+    }
+    .container {
+      font-weight: bold;
+      text-transform: capitalize;
+      width: 90vw;
+      margin: 20px auto;
+      color: #fff;
+
+      display: grid;
+      /* 3열 */
+      grid-template-columns: minmax(auto, 70px) 1fr minmax(auto, 70px);
+      /* 4행 */
+      grid-auto-rows: 70px minmax(200px, 30vh) minmax(200px, 30vh) 70px;
+    }
+
+    .container header, .container footer {
+      background-color: #000;   
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+      display: grid;
+      place-items: center;
+
+      /* grid-column: 1/span3; */
+      grid-column: 1 / -1;
+    }
+    .container .menu {
+      background-color: #DBA979;
+      list-style: none;
+      margin: 0; padding: 0;
+      
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    .container .blank {
+      background-color: #8576FF;
+      grid-column: 1 / 2;
+    }
+    .container .video-wrapper {
+      background-color: #7BC9FF;
+      grid-column: 2/3;
+      grid-row: 2/4;
+
+      position: relative;
+      overflow: hidden;
+    }
+    .container .video-wrapper video {
+      object-fit: cover;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      /* width: 100%; */
+    }
+    .container .video-wrapper h1 {
+      background-color: #000;
+      color: #fff;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 6px 30px;
+      transition: .3s;
+    }
+    .container .video-wrapper h1:hover {
+      border-radius: 30px;
+    }
+    .container aside {
+      background-color: #E8EFCF;
+      /* grid-column: 3 / 4; */
+      grid-column: -1 / -2;
+      grid-row: 2 / 3;
+
+      display: grid;
+      place-items: center;     
+    }
+    .container aside:last-of-type {
+      grid-row: 3/ 4;
+      border-bottom: none;
+    }
+    
+
+    
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>header</header>
+    <ul class="menu border-style">
+      <li class="vertical-txt">봄</li>
+      <li class="vertical-txt">여름</li>
+      <li class="vertical-txt">가을</li>
+    </ul>
+    <div class="blank border-style"></div>
+    <div class="video-wrapper">
+      <video src="../assets/video/sampleV.mp4" autoplay muted loop></video>
+      <h1>grid</h1>
+    </div>
+
+    <aside class="item1 border-style vertical-txt">아이템1</aside>
+    <aside class="item2 border-style vertical-txt">아이템2</aside>
+
+    <footer>footer</footer>
+  </div>
+</body>
+</html>
