@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>미디어쿼리선언방식</title>
+  <!-- 외부선언 1
+  <link rel="stylesheet" href="./style.css"> -->
+  <!-- 외부선언 2 모바일 우선일 경우 작은 값을 먼저 연결
+  <link rel="stylesheet" href="./mq_m.css">
+  <link rel="stylesheet" href="./mq_t.css">
+  <link rel="stylesheet" href="./mq_pc.css"> -->
+  <!-- 외부선언 3 -->
+  <link rel="stylesheet" href="./mq_m.css">
+  <link rel="stylesheet" href="./tablet.css" media="(min-width: 768px)">
+  <link rel="stylesheet" href="./pc.css" media="(width >= 1200px)">
+  <!-- 내부 선언 -->
+  <style>
+    /* 모바일 기준 */
+    /* body {
+      color: #fff;
+      margin: 0;
+      text-align: center;
+      width: 100vw; height: 100vh;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 2fr 2fr 2fr;
+    }
+    h1 {
+      margin: 0;
+      background-color: pink;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+    h2 {
+      margin: 0;
+      background-color: purple;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+    .container .box {
+      color: #000;
+      height: 100%;
+    }
+    .container .box1 { background-color: green;}
+    .container .box2 {background-color: beige;}
+    .container .box3 {background-color: yellowgreen} */
+    ----------------------------------------------------------
+    /* html {
+      font-size: 18px;
+    }
+    body {
+      margin: 0;
+      text-align: center;
+      word-break: break-all;
+      overflow-wrap: break-word;
+    }
+    h1 {
+      background-color: #76ABAE;
+      color: #fff;
+      font-size: 1.5rem;
+      margin: 0;
+      padding: 30px;
+      transition: .4s;
+    }
+    h1 strong {
+      display: block;
+    }
+    h2 {
+      font-size: 1.4rem;
+      background-color: #87A922;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+      transition: .4s;
+    }
+    .container {
+      font-weight: bold;
+      font-size: 1.1rem;
+      display: grid;
+      grid-auto-rows: 20vh;
+    }
+    .container .box1 {background-color: #FFFAB7;}
+    .container .box2 {background-color: #7EA1FF;}
+    .container .box3 {background-color: #ECCA9C;} */
+    /* 768px */
+    /* @media screen and (min-width: 768px) {
+      h1 {
+        background-color: lightgreen;
+      }
+      h2 {
+        background-color: lightpink;
+      }
+      .container .box {
+        height: 80%;
+        margin: 0 100px;
+      }
+    } */
+    ----------------------------------------------------------------
+    /* @media screen and (min-width: 768px) {
+      html {
+        font-size: 17px;
+      }
+      h1 {
+        background-color: #77B0AA;
+        padding: 40px;
+      }
+      h1 strong {
+        display: inline;
+      }
+      h2 {
+        background-color: #A79277;
+      }
+      .container {
+        width: 70vw;
+        margin: 0 auto;
+      }
+    } */
+    /* 1200px */
+    /* @media screen and (min-width: 1200px) {
+    h1 {
+      display: flex;
+      justify-content: center;
+    }
+    h2 {
+      display: none;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr) ;
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+    .container .box {
+      margin: 0;
+    }
+  } */
+  ---------------------------------------------------------------
+  /* @media screen and (min-width: 1200px) {
+    h1 {
+      background-color: #A34343;
+      padding: 50px;
+    }
+    h2 {
+      display: none;
+    }
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  } */
+  </style>
+</head>
+
+<body>
+  <h1>미디어쿼리 <strong>선언 방식</strong></h1>
+  <h2>내부 선언과<br> 외부선언</h2>
+  <div class="container">
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+  </div>
+</body>
+</html>

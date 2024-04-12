@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+
+  h1 {
+    background-color: #77B0AA;
+    padding: 40px;
+  }
+
+  h1 strong {
+    display: inline;
+  }
+
+  h2 {
+    background-color: #A79277;
+  }
+
+  .container {
+    width: 70vw;
+    margin: 0 auto;
+  }
+}
