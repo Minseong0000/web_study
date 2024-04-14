@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>mqEx3</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+  <style>
+    body {
+      margin: 0;
+      font-weight: bold;
+      font-size: 40px;
+      text-align: center;
+      width: 100%;
+      
+    }
+    .bgc {
+      background-color: antiquewhite;
+      height: 40vh;
+      
+    }
+    .wrapper {
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px;
+      width: 80%;
+      margin: auto;
+      transform: translateY(100px);
+    }
+
+    .wrapper .box {
+      background-color: lime;
+    }
+    .wrapper .box4 {
+      display: none;
+    }
+    @media (width >= 768px) {
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .box10 {
+        display: none;
+      }
+    }
+    @media (width >= 1200px) {
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .bgc .wrapper .box10 {
+        display: block;
+        background-color: aquamarine;
+      }
+    }
+    @media (width >= 1400px) {
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+      }
+      .wrapper .box4 {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bgc">
+    <div class="wrapper">
+      <div class="box box1">box1</div>
+      <div class="box box2">box2</div>
+      <div class="box box3">box3</div>
+      <div class="box box4">box4</div>
+      <div class="box box5">box5</div>
+      <div class="box box6">box6</div>
+      <div class="box box7">box7</div>
+      <div class="box box8">box8</div>
+      <div class="box box9">box9</div>
+      <div class="box box10">box10</div>
+    </div>
+  </div>
+</body>
+
+</html>
