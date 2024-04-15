@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>mqEx4</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    body {
+      background: url(../assets/images/bac.jfif) no-repeat fixed 100% 0 / cover;
+      font-weight: bold;
+      font-size: 2rem;
+      margin: 0;
+      box-sizing: border-box;
+      
+    }
+    nav {
+      border-bottom: 1px solid #fff;
+      position: relative;
+      
+    }
+    .gnb {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .gnb li {
+      border-bottom: 1px solid #fff;    
+    }
+    .gnb li a {
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+      display: block;
+      padding: 5px 10px;
+    }
+    .mobile-btn {
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+      display: block;
+      padding: 5px 10px;
+      background-color: purple;
+    }
+    .mobile-btn::after {
+      content: "...";
+      position: absolute;
+      right: 0;
+      writing-mode: vertical-lr;
+      transform: translateY(30%)
+    }
+  
+    @media (min-width:768px) {
+      nav {
+        border: none;
+      }
+      .gnb {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-bottom: 3px solid #fff;
+      }
+      .gnb li:nth-child(odd) {
+        border-right: 1px solid #fff;
+      }
+      .gnb li:last-child {
+        border-bottom: none;
+      }  
+      .mobile-btn {
+        display: none;
+      }
+      .gnb li a:hover {
+      background-color: purple;
+      }
+    }
+    @media (min-width:1200px) {
+      .gnb {
+        display: flex;
+        justify-content: center;
+      }
+      .gnb li {
+        border-bottom: none;
+      }
+      .gnb li:nth-child(even) {
+        border-right: 1px solid #fff;
+      }
+      .gnb li a:hover {
+      background-color: purple;
+     }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul class="gnb">
+      <li><a href="#">home</a></li>
+      <li><a href="#">about</a></li>
+      <li><a href="#">service</a></li>
+      <li><a href="#">product</a></li>
+      <li><a href="#">contact</a></li>
+    </ul> 
+      <a href="#" class="mobile-btn">menu</a>
+  </nav>
+</body>
+</html>

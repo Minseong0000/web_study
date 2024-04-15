@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/* font-family: "EB Garamond", serif; */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+body {
+  font-family: "EB Garamond", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif serif;
+  font-weight: 400;
+  font-size: 3ch;
+  text-transform: uppercase;
+  background: url(../assets/images/bac.jfif) no-repeat fixed 50% / cover;
+  color: #fff;
+}
+nav .global-menu {
+  /* display: grid; */
+  display: none;
+  /* grid-auto-rows: 40px; */
+}
+nav .global-menu.active {
+  display: grid;
+}
+nav a {
+  display: block;
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+}
+
+nav .mobile-btn {background-color: rgb(20, 30, 70, 0.7);
+  background: url(../assets/images/ellipsis-vertical-solid.svg) no-repeat 98% 50% / 10px;
+}
+
+/* }.nav .mobile-btn::afer{} */
+ 
