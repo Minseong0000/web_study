@@ -15,13 +15,17 @@ header {
 header img:first-child {
   padding-left: 20px;
 }
-header img:last-child {
-  width: 30px; height: 20px;
+header .menu-bar {
+  width: 35px; height: 25px;
   
   position: absolute;
   top: 50%; right: 0;
   transform: translate( 0, -50%);
   padding-right: 15px;
+
+}
+header .gnb {
+  display: none;
 }
 .main-image {
   height: 800px;
@@ -137,29 +141,34 @@ header img:last-child {
   margin: 30px auto;
 }
 .our-business p {
-  width: 350px;
+  width: 80%;
   margin: 0 auto;
   margin-bottom: 30px;
   font-weight: 400;
   color: #6d6f72;
 }
-.our-business .business-wrapper {}
+
 .our-business .business-wrapper img {
-  width: 375px; height: 400px;
+  width: 90%;
+  box-sizing: border-box;
+  
   
 }
 .our-business .business-wrapper h4 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.our-business .business-wrapper p {
+.our-business .business-wrapper div p {
   font-weight: 400;
   color: #212529;
+  margin-bottom: 40px;
+}
+.business-wrapper p:last-of-type {
+  margin-bottom: 2px;
 }
 /* ------------------------------------------------ */
 .our-youtube {
-  background-color: #ddd;
-  height: 530px;
+  background-color: #e9ecef;
 }
 .our-youtube h2 {
   font-size: 2.5rem;
@@ -167,7 +176,184 @@ header img:last-child {
   padding-left: 20px;
 }
 .our-youtube p {
-  padding-top: 30px;
-  padding-left: 20px;
+  font-size: 1.2rem;
+  padding: 30px 20px 50px;
+  
 }
-.our-youtube iframe {}
+.our-youtube iframe {
+  aspect-ratio: 16/9;
+  width: 100%;
+  padding: 0 20px 40px;
+}
+/* ------------------------------------------------ */
+.our-service {
+  position: relative;
+}
+.our-service h2 {
+  font-size: 2.5rem;
+  margin-top: 50px;
+  text-align: center;
+}
+.our-service h2::after {
+  content: "";
+  display: block;
+  width: 70px; height: 2px;
+  background-color: #000;
+  margin: 30px auto;
+}
+.our-service img {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 30px;
+}
+.our-service h4 {
+  margin-top: 15px;
+  margin: 5%;
+  margin-bottom: 5px;
+}
+.our-service p {
+  margin: 5%;
+  margin-bottom: 120px;
+  margin-top: 0;
+}
+.our-service .flex-wrapper > div:not(:first-of-type) {
+  display: none;
+}
+/* ------------------------------------------------ */
+.location {
+  width: 90%;
+  margin-left: 5%;
+}
+.location h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.location .sub-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+.location .sub-title h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  
+}
+.location .sub-title::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 45%; height: 4px;
+  background-color: #000;
+
+  bottom: -5px;
+  left: 0;
+  
+}
+.location address {
+  margin-top: 70px;
+  font-style: normal;
+}
+.map {
+  width: 100%; height: 400px;
+  border: 1px solid #000;
+  margin-top: 30px;
+}
+.location address h4 {
+  padding-left: 10px;
+  margin-bottom: 3px;
+  font-weight: 800;
+}
+.location address p {
+  border-bottom: 1px solid #adb5bd;
+  padding-left: 10px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.location address p:last-of-type {
+  border-bottom: 5px solid #adb5bd;
+  margin-bottom: 100px;
+}
+/* ------------------------------------------------ */
+.lets-talk {
+  color: #fff;
+  text-align: center;
+  width: 100%; height: 350px;
+  background: url(./images/img-bg.jpg) no-repeat 100% / cover;
+  
+  position: relative;
+}
+.lets-talk .background-color {
+  background-color: rgb(118, 215, 196, 0.8);  
+  height: 100%;
+  
+  /* margin-top: 75px;
+  margin-bottom: 75px; */
+}
+.lets-talk h2 {
+  position: absolute;
+  top: 18%; left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 2rem;
+  
+  margin: 0 auto;
+ 
+}
+.lets-talk  p {
+  width: 80%;
+  font-size: 1.2rem;
+
+  position:absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}
+.lets-talk button {
+  background-color: transparent;
+  padding: 15px 20px;
+  border: 3px solid #fff;
+  color: #fff;
+  font-weight: 800;
+
+  position: absolute;
+  top: 85%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ------------------------------------------------ */
+.contact {
+  padding-left: 20px;
+  background-color: #e9ecef;
+}
+.contact .contact-flex > div:first-of-type {
+  padding-top: 100px;
+}
+.contact .contact-flex > div:not(:first-of-type) {
+  margin-top: 80px;
+}
+.contact  .contact-flex > div h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.contact .social .social-icon {
+  width: 100%;
+}
+.contact .contact-flex .social .social-icon img {
+  width: 25px; height: 25px;
+  margin: 4%;
+  margin-bottom: 50px;
+}
+/* ------------------------------------------------ */
+footer {
+  height: 170px;
+  background-color: #adb5bd;
+  position: relative;
+  text-align: center;
+}
+footer .txt-box {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}

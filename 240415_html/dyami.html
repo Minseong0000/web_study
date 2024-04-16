@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <link rel="stylesheet" href="../assets/style/minireset.min.css">
   <link rel="stylesheet" href="./dyami.css">
+  <link rel="stylesheet" href="./dyami-pc.css">
   <style>
 
   </style>
@@ -17,7 +18,15 @@
     <!-- logo -->
     <img src="./images/logo.png" alt="로고">
     <!-- hamburger menu -->
-    <img src="./images/bars-solid.svg" alt="bars">
+    <img src="./images/bars-solid.svg" alt="bars" class="menu-bar">
+
+    <ul class="gnb">
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">SERVICE</a></li>
+      <li><a href="#">PORTFOLIO</a></li>
+      <li><a href="#">BOARD</a></li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
   </header>
   <!--header------------------------------------------------------------------->
   <article class="main-image">
@@ -85,68 +94,139 @@
     <h2>Our Business</h2>
     <p>We are a passionate digital design agency that specializes
       in beautiful and easy-to-use digital design & web development services.</p>
-    <div class="business-wrapper">
-      <img src="./images/img-01.jpg" alt="사진">
-      <h4>Brokerage & Trading</h4>
-      <p>This theme does everything you could possibly want it to do</p>
-      <img src="./images/img-02.jpg" alt="사진">
-      <h4>Investment Banking</h4>
-      <p>This theme does everything you could possibly want it to do</p>
-      <img src="./images/img-03.jpg" alt="사진">
-      <h4>Contracts & Research</h4>
-      <p>This theme does everything you could possibly want it to do</p>
-      <img src="./images/img-04.jpg" alt="사진">
-      <h4>Award winning agency</h4>
-      <p>This theme does everything you could possibly want it to do</p>
+    <div class="pic-wrapper">
+      <div class="business-wrapper">
+        <div class="pic1">
+          <img src="./images/img-01.jpg" alt="사진">
+          <h4>Brokerage & Trading</h4>
+          <p>This theme does everything you could possibly want it to do</p>
+        </div>
+        <div class="pic2">
+          <img src="./images/img-02.jpg" alt="사진">
+          <h4>Investment Banking</h4>
+          <p>This theme does everything you could possibly want it to do</p>
+        </div>
+        <div class="pic3">
+          <img src="./images/img-03.jpg" alt="사진">
+          <h4>Contracts & Research</h4>
+          <p>This theme does everything you could possibly want it to do</p>
+        </div>
+        <div class="pic4">
+          <img src="./images/img-04.jpg" alt="사진">
+          <h4>Award winning agency</h4>
+          <p>This theme does everything you could possibly want it to do</p>
+        </div>
+      </div>
     </div>
   </article>
   <!--our-business------------------------------------------------------------------->
   <article class="our-youtube">
-    <h2>Our Youtube</h2>
-    <p>In an ideal world this text wouldn’t exist, a client would acknowledge the importance of having web copy before the design starts. Needless to say it’s very important, content is king and people are beginning to understand that. However, back over in reality some project schedules and budgets don’t allow for web copy to be written before the design phase, this is sad but true.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/fatYsQ__LW4?si=cqLXaRQHdXezh5B4&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="youtube-wrapper">
+      <h2>Our Youtube</h2>
+      <p>In an ideal world this text wouldn’t exist, a client would acknowledge the importance of having web copy before
+        the design starts. Needless to say it’s very important, content is king and people are beginning to understand
+        that. However, back over in reality some project schedules and budgets don’t allow for web copy to be written
+        before the design phase, this is sad but true.</p>
+      <iframe src="https://www.youtube.com/embed/fatYsQ__LW4?si=cqLXaRQHdXezh5B4&amp;controls=0"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
   </article>
   <!--our-youtube------------------------------------------------------------------->
   <article class="our-service">
-    <h2></h2>
-    <img src="" alt="">
-    <h4></h4>
-    <p></p>
+    <h2>Our Service</h2>
+    <div class="flex-wrapper">
+      <div class="Branding">
+        <img src="./images/img-05.jpg" alt="사진">
+        <h4>Branding</h4>
+        <p>This theme does everything you could possibly want it to do and, it is beautifully designed.</p>
+      </div>
+  
+      <div class="Development">
+        <img src="./images/img-06.jpg" alt="사진">
+        <h4>Branding</h4>
+        <p>This theme does everything you could possibly want it to do and, it is beautifully designed.</p>
+      </div>
+  
+      <div class="Analysis">
+        <img src="./images/img-07.jpg" alt="사진">
+        <h4>Branding</h4>
+        <p>This theme does everything you could possibly want it to do and, it is beautifully designed.</p>
+      </div>
+  
+      <div class="Marketing">
+        <img src="./images/img-08.jpg" alt="사진">
+        <h4>Branding</h4>
+        <p>This theme does everything you could possibly want it to do and, it is beautifully designed.</p>
+      </div>
+    </div>
   </article>
   <!--our-service------------------------------------------------------------------->
   <article class="location">
-    <h2></h2>
+    <h2>Location</h2>
     <div class="sub-title">
-      <h2></h2>
-      <h2></h2>
+      <h2 class="office">OFFICE</h2>
+      <h2>FACTORY</h2>
     </div>
-    <!-- 지도 -->
+    <div class="map">
+      <!-- 지도 -->
+    </div>
     <address>
-      <h4></h4>
-      <p></p>
-      <h4></h4>
-      <p></p>
-      <h4></h4>
-      <p></p>
-      <h4></h4>
-      <p></p>
+      <h4>ADDRESS</h4>
+      <p>795 Folsom Ave, Suite 600 San Francisco</p>
+      <h4>TEL</h4>
+      <p>02-1234-5678</p>
+      <h4>FAX</h4>
+      <p>02-1234-5678</p>
+      <h4>SUB</h4>
+      <p>Working at the nexus of aesthetics and sustainability to craft meaningful design ideas that endure.</p>
+      <h4>BUS</h4>
+      <p>This theme does everything you could possibly want it to do and, it is beautifully designed.</p>
     </address>
   </article>
   <!--location------------------------------------------------------------------>
   <article class="lets-talk">
-    <h2></h2>
-    <p></p>
-    <button></button>
+    <div class="background-color"></div>
+      <h2>Let's Talk</h2>
+      <p>Herb multiply also earth one you’ll a wherein form creature be.
+        Unto land open creature give their midst together, fruit good thing multiply fill it.</p>
+      <button>CONTACT US</button>
   </article>
   <!--let's talk------------------------------------------------------------------->
   <article class="contact">
     <!-- logo -->
-    <img src="" alt="">
-    <p></p>
+    <div class="contact-flex">
+      <div class="img-wrapper">
+        <img src="./images/logo.png" alt="로고">
+      </div>
+      <div class="mobile">
+        <h4>CONTACT</h4>
+        <p>02 1234 5678</p>
+        <p>from.yami@gmail.com</p>
+      </div>
+      <div class="place">
+        <h4>LOCATION</h4>
+        <p>795 Folsom Ave, Suite 600</p>
+        <p>San Francisco, CA 94107</p>
+      </div>
+      <div class="social">
+        <h4>SOCIAL</h4>
+        <div class="social-icon">
+          <img src="./images/facebook-f.svg" alt="아이콘">
+          <img src="./images/instagram.svg" alt="아이콘">
+          <img src="./images/youtube.svg" alt="아이콘">
+          <img src="./images/tiktok.svg" alt="아이콘">
+        </div>
+      </div>
+    </div>
   </article>
   <!--contact------------------------------------------------------------------->
   <footer>
-    <p></p>
+    <div class="txt-box">
+      <p>Copyrights © 2020 All Rights Reserved by DYAMI.</p>
+      <p>Terms of Use / Privacy Policy</p>
+    </div>
   </footer>
 </body>
 
