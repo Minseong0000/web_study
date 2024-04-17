@@ -469,7 +469,6 @@ header .title-wrapper h3 {
 /* ---------------------------donation-------------------------------- */
 footer {
   width: 100%;
-  height: 23vh;
   background-color: #232323;
   color: #3c3c3c;
   border-bottom-left-radius: 10px;
@@ -493,7 +492,7 @@ footer .footer-text {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 footer p {
   display: inline;
@@ -518,5 +517,5 @@ footer .third p {
   margin: 1vh;
 }
 footer p:last-of-type {
-  padding-bottom: 1vh;
+  padding-bottom: 5vh;
 }
