@@ -1,0 +1,9 @@
+대소문자를 구분하여 사용
+코드는 ;을 사용하여 마침
+"",'' 겹침오류 주의
+ex) document.write("책에\"자바스크립트는 대소문자를 구분해야 합니다\"라고 나와있다.");
+
+Variables(var)-변하는 데이터를 저장할 수 있는 메모리 공간
+ㄴ데이터 종류: 숫자형numbers, 문자형string, 논리형boolean, 빈null
+기본구조- var 변수명 or var 변수명=값
+ex) var mathNum=80
