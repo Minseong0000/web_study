@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* fonts */
+/* "Comfortaa", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+/* "Dongle", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
+/**** css 변수 ****/
+/* 전역 변수 */
+:root {
+  /* 선언(설정) */
+  --font-ko: 'Dongle', sans-serif;
+  --font-en: 'Comfortaa', sans-serif;
+
+  --font-size-sm: 1.2rem;
+  --font-size-md: 1.5rem;
+  --font-size-lg: 2rem;
+  --font-size-xlg: 3rem;
+
+  --color-white: #fff;
+  --color-gray: #d6d6d6;
+  --color-brown: #AF8260;
+  --color-skyblue: #E1F7F5;
+  --color-beige: #FFF5E0;
+  --color-pink: #FFEFEF;
+}
+
+.grid-container {
+  display: grid;
+}

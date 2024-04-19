@@ -13,14 +13,37 @@
     var s="javascript";
     var num="100";
     var tag="<h1>String<h1>";
-    var t=Number("500");
+    var t=Number("500")
+    var y=Number("100")
+    document.write(tag);
+    document.write(typeof s);
+    result=t + y
+    document.write(result);
+
+    // 숫자형
+    var s=100;
+    var t=Number("500")
     document.write(t);
+    document.write(typeof t);
+    
 
     // 논리형
     var s=true
     var t=10>=100;
-    var K=Boolean("hello");
-    document.write(t)
+    var k=Boolean("hello");
+    var k=Boolean("hi")
+    // boolean(0/null/undefined/"")를 제외한 모든 데이터에 대해 true값을 반환
+    document.write(k, "<br>")
+    document.write(typeof k, "<br>")
+
+    var a=true;
+    var b=false;
+    var c=10>5;
+    var d=Boolean(null);
+    document.write(a,"<br>")
+    document.write(b,"<br>")
+    document.write(c,"<br>")
+    document.write(d,"<br>")
   </script>
 </head>
 
