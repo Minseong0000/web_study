@@ -28,4 +28,7 @@
 
 .grid-container {
   display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-template-rows: 50px repeat(10, 40px);
+  
 }
