@@ -1,0 +1,61 @@
+<body>
+  <h1>중첩switch문Ex</h1>
+  <script>
+ /*    const defaultID = 'web';
+    const defaultPw = 1234;//number
+    let msg = "";
+    let userId = prompt('아이디를 입력하세요');
+    switch(userId === defaultID) {
+      case null:
+         msg = '취소 되었습니다'; 
+         break;
+      case true: 
+         msg = '아이디가 일치합니다';
+         let userPw = prompt ('비밀번호를 입력하세요');
+         switch(userPw === defaultPw) {
+          case null:
+            msg = '취소 되었습니다'; 
+            break;
+          case true:
+            msg= '로그인 되었습니다';
+            break;
+          default: 
+            msg= '비밀번호가 일치하지 않습니다';
+            break;
+         }
+         break;
+      default:
+         msg = '비밀번호가 일치하지 않습니다';
+         break;    
+    }
+    if(userId === defaultID) documnet.body.innerHTML += `${msg}`; */
+
+    const defaultID = 'web';
+    const defaultPw = 1234;//number
+
+    let userId = prompt('아이디를 입력하세요');
+
+    switch(userId === defaultID) {
+      case true: 
+         alert('아이디가 일치합니다');
+
+         let userPw = +prompt ('비밀번호를 입력하세요');
+        //  let userPw = prompt ('비밀번호를 입력하세요');
+        //  userPw = Number(userPw); 
+
+        //  switch (userPw * 1)
+         switch(userPw) {
+          case defaultPw:
+            alert('로그인 되었습니다');
+            break;
+          default:
+            alert('비밀번호가 일치하지 않습니다'); 
+         }
+
+         break;
+      default:
+        alert('아이디가 일치하지 않습니다')   
+        }
+
+  </script>
+</body>

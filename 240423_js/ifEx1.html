@@ -1,0 +1,33 @@
+<body>
+  <h1>ifEx1</h1>
+  <script>
+    /* 
+      ㅇ
+    */
+
+    let score = prompt('당신의 성적은?','1~100의 숫자로만 입력하세요');
+
+    /*  
+      if(score >= 60 && score <= 100) {
+      alert(`${score} 점은 통과입니다`)
+    } else if(score < 60) {
+      alert(`${score} 점은 재평가 입니다`)
+    } else if(score > 100) {
+      alert('100점 이하로만 입력해 주세요')
+    } else {
+      alert('숫자만 입력해 주세요')
+    } 
+    */
+
+    //if문 작성시 순서 중요
+    if(score > 100) {
+      alert('100점 이하로만 입력해 주세요');
+    } else if(score >= 60) {
+      alert(`${score} 점은 통과입니다`);
+    } else if(score < 60) {
+      alert(`${score} 점은 재평가 입니다`);
+    } else {
+      alert('숫자만 입력해 주세요');
+    }
+  </script>
+</body>

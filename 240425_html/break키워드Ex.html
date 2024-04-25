@@ -1,0 +1,39 @@
+<body>
+  <h1>break키워드Ex</h1>
+  <script>
+    /* 
+      0~100중에 3의 배수만 출력
+      40이상인 경우 break 키워드를 사용하여 벗어남
+    */
+
+    let total = '';
+    /* 
+    let i = 0;
+    while(i <= 100) {
+      if(i>=40) {
+        break;
+      }
+      total += i + ',';
+      i += 3;
+    } */
+
+  /*   for(let i = 0; i <= 100; i += 3) {
+      if(i>=40) {
+        break;
+      }
+      total += i + ',';
+    }
+    document.body.innerHTML = total; */
+
+    for(let i=1;i<=100;i++) {
+     if(i%3==0 && i<=40) {
+      console.log(`${i}`);
+    } /* else if(i>=41) {
+      console.log(`${i}어렵다`);
+    } */
+   }
+   document.body.innerHTML = total;
+
+
+  </script>
+</body>

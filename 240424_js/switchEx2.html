@@ -1,0 +1,58 @@
+<body>
+  <h1>switchEx2</h1>
+  <script>
+    /* 
+      1~4 사이의 숫자를 입력하면 해당 번호의 이미지 출력
+      취소 버튼 클릭시 취소했습니다 출력
+    */
+    let num = prompt('1~4 사이의 숫자를 입력하세요');
+    let img = "";
+    num = Number(num);
+
+    switch(num) {
+      case 1:
+        img = '<img src="./image/food1.jpg" alt="음식">';
+        break;
+      case 2:
+        img = '<img src="./image/food2.jpg" alt="음식">';
+        break;
+      case 3:
+        img = '<img src="./image/food3.jpg" alt="음식">';
+        break;
+      case 4:
+        img = '<img src="./image/food4.jpg" alt="음식">';
+        break;
+      default: 
+        img = '<h2>숫자만 입력해 주세요</h2>'; 
+    }
+    document.body.innerHTML += img;
+    
+   /*  let num = prompt('1~4 사이의 숫자를 입력하세요');
+    num = Number(num);
+    let url = "";
+
+    switch(num) {
+      case null:
+        url = '<h2>취소 했습니다</h2>'; 
+        break;
+      case 1:
+        url = `<img src="./image/food${num}.jpg" alt="img${num}">`;
+        break;
+      case 2:
+        url = `<img src="./image/food${num}.jpg" alt="img${num}">`;
+        break;
+      case 3:
+        url = `<img src="./image/food${num}.jpg" alt="img${num}">`;
+        break;
+      case 4:
+        url = `<img src="./image/food${num}.jpg" alt="img${num}">`;
+        break;      
+      default: 
+        url = '<h2>숫자만 입력해 주세요</h2>'; 
+    }
+
+    document.body.innerHTML += url;
+   */
+
+  </script>
+</body>

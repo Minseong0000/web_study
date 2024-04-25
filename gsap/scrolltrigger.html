@@ -1,91 +1,34 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="utf-8">
-  <title>scroll trigger</title>
+  <title>scrolltrigger</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <style>
-    /* Global styles come from external css https://codepen.io/GreenSock/pen/gOWxmWG */
-
-
-    html, body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
-.container {
-  position: relative;
-  width: 90vw;
-  height: 90vh;
-  max-width: 90vh;
-  max-height: 90vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 9px;
-  border: solid 2px var(--mid);
-  background-color: orange;
-}
-
-h4 {
-  color: var(--mid);
-  position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
-  bottom: 1rem;
-  text-align: center;
-  pointer-events: none;
-}
-
-.flair {
-  cursor: pointer;
-  width: 70px;
-  height: 70px;
-  max-height: 15vh;
-  max-width: 15vh;
-  background-color: blue;
-}
-
+    .box {
+      width: 100px; height: 100px;
+      background-color: #ddd;
+    }
+    .bgc {
+      height: 150vh;
+      background-color: #000;
+    }
   </style>
-  <script src="https://https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <div class="wrapper">
-      <div class="flair flair--1"></div>
-    </div>
-        <div class="wrapper">
-      <div class="flair flair--3"></div>
-    </div>
-    <div class="wrapper">
-      <div class="flair flair--2"></div>
-    </div>
-  
-    <h4>Spin us, Drag us...</h4>
+  <div class="bgc"></div>
+  <div class="box">
   </div>
+
+
   <script>
-    gsap.registerPlugin(Draggable, InertiaPlugin);
-
-Draggable.create(".flair--1", {
-  type: "x",
-  bounds: ".container"
-});
-
-Draggable.create(".flair--3", {
-  type: "rotation",
-  inertia: true
-});
-
-Draggable.create(".flair--2", {
-  bounds: ".container",
-  inertia: true
+    gsap.to(".box", {
+  scrollTrigger: ".box", // start the animation when ".box" enters the viewport (once)
+  x: 1500,
+  y: -1000
 });
   </script>
-  
 </body>
-
 </html>

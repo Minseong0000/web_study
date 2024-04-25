@@ -1,0 +1,74 @@
+<body>
+  <h1>ifEx6</h1>
+  <script>
+    /* 
+    입력한 정수에 따라 상(100~81), 중(80~61), 하(60~41), 탈락(40~0) 출력
+    그 외 내용 입력시 '점수만 입력하세요' 출력
+    
+    취소 버튼 클릭시 '입력이 취소되었습니다' 출력
+    */
+ /*   const score = prompt('점수를 입력하세요');
+   if(score) {
+    if(score <= 100 && score >= 81) {
+    alert(`${score}점은 상 입니다`);
+   } else if (score <= 80 && score >= 61) {
+    alert(`${score}점은 중 입니다`);
+   } else if (score <= 60 && score >= 41) {
+    alert(`${score}점은 하 입니다`);
+   } else if (score <= 40 && score >= 0) {
+    alert(`${score}점은 탈락 입니다`);
+   }  else {
+    alert('100점 이하의 숫자만 입력하세요');
+   }
+   }  else {
+    alert('취소 되었습니다');
+   } 
+  */
+ let score = prompt('점수를 입력하세요');
+ 
+/*  if(score === null) {
+  document.body.innerHTML += `<h2>입력이 취소 되었습니다</h2>`;
+ } else if(score <= 100 && score >= 81) {
+  document.body.innerHTML += `<h2>${score}점은 '상'입니다</h2>`;
+ } else if(score <= 80 && score >= 61) {
+  document.body.innerHTML += `<h2>${score}점은 '중'입니다</h2>`;
+ } else if(score <= 60 && score >= 41) {
+  document.body.innerHTML += `<h2>${score}점은 '하'입니다</h2>`;
+ } else if(score <= 40 && score >= 0) {
+  document.body.innerHTML += `<h2>${score}점은 '탈락'입니다</h2>`;
+ } else {
+  document.body.innerHTML += '100점 이하의 숫자만 입력하세요';
+ } */
+ let grade = '';//문자열로 초기화
+
+ if(score === null) {
+  document.body.innerHTML += `<strong>입력이 취소 되었습니다<strong>`;
+ } else if(score <= 100 && score >= 81) {
+  grade = '상';//변수에 재할당
+ } else if(score <= 80 && score >= 61) {
+  grade = '중';
+ } else if(score <= 60 && score >= 41) {
+  grade = '하'; 
+ } else if(score <= 40 && score >= 0) {
+  grade = '탈락';
+ } else {
+  document.body.innerHTML += `100점 이하의 숫자만 입력하세요`;
+ }
+
+ /*
+ if(grade) {
+   document.body.innerHTML += `<h2>${score}점은 ${grade}입니다</h2>`; 
+ }  else {
+  false
+ } */
+
+ //삼항연산자
+  // grade ? document.body.innerHTML += `<h2>${score}점은 ${grade}입니다</h2>` : false;
+
+ //단락구문평가
+ grade && (document.body.innerHTML += `<h2>${score}점은 ${grade}입니다</h2>`);
+
+
+  </script>
+</body>
+

@@ -1,0 +1,29 @@
+<body>
+  <h1>break키워드</h1>
+  <script>
+    // 1~5번까지 알림창
+    /*
+    let i = 1;
+    while (i<=5) {
+      alert(`${i}번째 알림입니다`);
+      i++;//증감식 
+    } 
+    */
+
+    /* for(let i=1; i<=5; i++) {
+      alert(`${i}번째 알림입니다`);
+    } */
+
+    let i = 1;
+    while(true) {
+      alert(`${i}번째 알림입니다`);
+     /*  if(i === 3){
+        break;//이 키워드 만나는 즉시 구문을 벗어남. if, while, switch, for 문
+      } */
+      i++;//증감식
+      if(i===4){
+        break;
+      }
+    }
+  </script>
+</body>

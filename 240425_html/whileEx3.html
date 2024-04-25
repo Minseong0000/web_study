@@ -1,0 +1,22 @@
+<body>
+  <h1>whileEx3</h1>
+  <script>
+    //2~9단까지 출력
+    let num = 2;
+    let i = 1;
+    let result = '<br>';
+
+    while (num<=9) {
+      document.body.innerHTML += `${num}단`;
+      while(i<=9) {
+        result += `${num}*${i}=${num*i}<br>`;
+        i++;
+      }
+      document.body.innerHTML += result;
+      num++;     
+      k=1;
+
+    }  
+  
+  </script>
+</body>

@@ -1,0 +1,18 @@
+<body>
+  <h1>whileEx1</h1>
+  <script>
+    /* 
+      선생님은 김지원을 닮지 않았다라고 물어보면(confirm)
+      확인(네)을 누르면 계속 질문
+      취소(아니요)를 누르면 빠져나옴 '저도 그렇게 생각합니다'
+    */
+    while (true) {//무한 반복 설정
+      const quit = confirm(`선생님은 김지원을 닮`);
+
+      if(quit != true) {
+        alert('저도 글케 생각'); 
+        break;
+      }
+    }
+  </script>
+</body>
