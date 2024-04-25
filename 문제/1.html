@@ -5,7 +5,7 @@
     //모든 문제를 풀어서 졸업을하세요
     //1~7단계의 문제가 존재합니다
     /* 
-    1단계 문제 : 1+1 답:2
+    1단계 문제 : 사용자가 숫자를 입력하면 홀수인지 짝수인지 알려주고 다음단계 넘어가기,숫자가 아닌 답 입력시 실패
     2단계 문제 : 2+2 답:4
     3단계 문제 : 3+3 답:6
     4단계: 1~3을 고르시오
@@ -15,7 +15,7 @@
     6단계 문제 : 6+6 답:12
     7단계 문제 : 7+7 답:14
     */
-    //각 문제를 통과하면 다음 단계로 넘어가게 하시오
+    //각 문제를 통과하면 다음 단계로 넘어가는 알림을 만드시오(ex. n단계 입니다...)
     /* 
     n번째 문제를 실패하면, 각각 '당신은 7등급~1등급입니다' 라는 알림과 진행이 멈추게 하세요
     */
@@ -27,20 +27,110 @@
 
       if (level === 1) {
         alert('첫번째 시험문제입니다');
-        let question1 = prompt('숫자를 입력하세요');
-        if (question1%) {
-          alert('통과했습니다');
+        let mission1 = prompt('정수를 입력하세요');
+        if (mission1%2==0) {
+          alert(`${mission1}은/는 짝수 입니다`);
+          level++;
+        } else if(mission1%2==1) {
+          alert(`${mission1}은/는 홀수 입니다`);
           level++;
         } else {
           alert('당신은 유치부 입니다');
           break;
         }
       }
-      if (level === 2) {
-        alert('첫번째 시험문제입니다');
 
+      alert(`${level}단계 입니다`);
+
+      if (level === 2) {
+        alert('두번째 시험문제입니다');
+        let mission2 = prompt('요일을 입력하시면 영어로 알려드립니다.');
+        switch(mission2) {
+          case '월요일':
+            alert('monday');
+            level++;
+            break;
+          case '화요일':
+            alert('tuesday');
+            level++;
+            break;
+          case '수요일':
+            alert('wednesday');
+            level++;
+            break;
+          case '목요일':;
+            alert('thursday');
+            level++;
+            break;
+          case '금요일':
+            alert('friday');
+            level++;
+            break;
+          case '토요일':
+            alert('saturday');
+            level++;
+            break;
+          case '일요일':
+            alert('sunday');
+            level++;
+            break;
+          default: 
+            alert('당신은 초등부 입니다');
+            break;
+        }
+        
       }
+
+      alert(`${level}단계 입니다`);
+
+      if (level === 3) {
+        alert('세번째 시험문제입니다');
+        let mission3 = prompt('숫자를 입력하시면 배수를 알려드려요');
+        if(mission3 >= 2 && mission3 <= 9) {
+          let i = 1;
+          while(i<=9) {
+            alert(`${mission3*i}`);
+            i++;
+          }
+          level++;
+        }
+        } else {
+          alert('당신은  중등부 입니다');
+          break;
+        }
+
+      alert(`${level}단계 입니다`);
+
+      if (level === 4) {
+        alert('네번째 시험문제입니다');
+        let mission4 = prompt('1~272까지의 합은?');
+        if(mission4==33153) {
+          alert('정답입니다')
+          level++;
+        } else {
+          alert('당신은  고등부 입니다');
+          break;
+        }
+      }
+
+      alert(`${level}단계 입니다`);
+
+      if (level === 5) {
+        alert('마지막 시험문제입니다');
+        while (true) {
+          const quit = confirm(`나는 코딩에 자신있다`);
+
+        if(quit != true) {
+         alert('성인이 된것을 축하합니다'); 
+         break;
+        }
+        }
+        break;
+      }
+
+
+
+
     }
-    // } document.body.innerHTML += `${age}`;
   </script>
 </body>
