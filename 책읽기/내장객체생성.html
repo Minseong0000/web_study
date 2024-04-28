@@ -1,0 +1,28 @@
+<body>
+  <script>
+    var drink = new Object();
+    drink.type = "wine";
+    drink.price = 100000;
+    drink.info = function () {
+      document.write("drink 종류:" + this.type, "<br>");
+      document.write("drink 가격:" + this.price, "<br>");
+    }
+
+    var tv = {
+      color: "white",
+      price: 300000,
+      info: function () {
+        document.write("tv 색상:" + this.color, "<br>");
+        document.write("tv 가격:" + this.price, "<br>");
+      }
+    };
+
+    document.write("<h1>drink 객체 메서드 호출</h1>");
+    drink.info();
+    document.write("<h1>tv 객체 메서드 호출</h1>");
+    tv.info();
+
+
+
+  </script>
+</body>
