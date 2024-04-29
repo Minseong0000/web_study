@@ -1,0 +1,21 @@
+<body>
+  <h1>함수Ex6</h1>
+  <script>
+    //'입력한 금액의 부가세 포함 가격은 xxx원 입니다' 출력
+    
+    const vat = (total) => {
+      let charge = prompt('금액을 입력하세요');
+      // charge * 0.1 + charge =>
+      // charge * 1.1
+      // const cash = charge * 1.1
+
+      if(charge) {
+        let tax = parseInt(charge) * 1.1;
+        alert(`입력한 금액의 부가세 포함 가격은 ${tax.toLocaleString()}원 입니다`);
+      } else {
+        alert('금액만 입력해주세요');
+      }
+    }
+    vat('total');
+  </script>
+</body>

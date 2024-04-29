@@ -1,0 +1,38 @@
+<body>
+  <h1>함수Ex4</h1>
+  <script>
+    //매개변수 없이 함수 호출시 내용이 순차적으로 출력
+
+    let i =0;//숫자로 초기화
+    const 과일 = () => {
+      // let i =0; 지역변수
+      i++;
+      let msg='';
+    
+      switch(i) {
+        case 1:
+          msg = '고구마';
+          break;
+        case 2:
+          msg = '사과';
+          break;
+        case 3:
+          msg = '포도';
+          break;
+        case 4:
+          msg = '귤';
+          break;
+        default:
+          msg = '끝';
+      }
+      console.log(msg);
+    }
+
+    과일();// 고구마
+    과일();// 사과
+    과일();// 포도
+    과일();// 귤
+    과일();// 끝
+    과일();// 끝
+  </script>
+</body>

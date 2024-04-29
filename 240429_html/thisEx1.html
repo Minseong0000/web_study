@@ -1,0 +1,23 @@
+<body>
+  <h1>thisEx1</h1>
+  <script>
+    /* 
+      1. 빈 객체 생성 후 객체 리터럴 방식으로 프로퍼티 추가
+      2. 객체 프로퍼티(속성): id,name,size,output() <- 콘솔에 주문하신 커피는 
+      라떼이며 가격은 2000원 입니다 출력
+      3. 객체 읽기를 통해 output()의 내용을 콘솔에서 확인
+    */
+
+    const newObject = {};
+
+    newObject.id = 1;
+    newObject.name = '라떼';
+    newObject.size = 'venti';
+    newObject.price = 2000;
+    newObject.output= function () {
+      console.log(`주문하신 커피는 ${this.size} ${this.name}이며 가격은 ${this.price.toLocaleString()}원입니다.`);
+    }
+    console.log(newObject);
+    newObject.output();
+  </script>
+</body>

@@ -1,0 +1,30 @@
+<body>
+  <h1>함수Ex5</h1>
+  <script>
+    //입력한 과일 종류와 숫자에 따라 과일 이름이 숫자만큼 반복 출력
+    let msg = '';
+    const 과일 = (a, b=1) => {
+      if(a === '귤') {
+        msg = a;
+      } else if(a === '사과') {
+        msg = a;
+      } else if(a === '포도') {
+        msg = a;
+      }
+
+      for(let i =1; i<=b; i++) {
+        console.log(msg)
+      }
+    }
+
+ /*    const 과일 = (a, b=1) => {
+      for(let i=0; i<b; i++) {
+        console.log(a);
+      }
+    } */
+
+    과일('귤', 2);//귤 귤
+    과일('사과', 3);//사과 사과 사과
+    과일('포도');//포도
+  </script>
+</body>
