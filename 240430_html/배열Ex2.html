@@ -1,0 +1,34 @@
+<body>
+  <h1>배열Ex2</h1>
+  <script>
+    //좋아하는 음식 4개를 배열로 만들고 순차적으로 출력
+    const food = ["삼겹살","김치찌개","명란젓","뼈해장국",];
+
+    //for(){}
+    for(let i=0; i<food.length; i++) {
+      console.log(food[i]);
+    }
+
+    //.forEach();
+    const menu = foods => console.log(foods);
+    // food.forEach(foods => console.log(foods));
+    food.forEach(menu);
+
+   /*  food.forEach(function (element) {
+      console.log(element);
+    }) */
+
+    //.map();
+
+    /*  const type = name => console.log(name);
+    food.map(type); */
+
+    /* const menu = name => name;
+    console.log(food.map(menu)); */
+
+    food.map(item => console.log(item));
+
+    
+    
+  </script>
+</body>

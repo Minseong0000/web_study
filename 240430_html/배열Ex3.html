@@ -1,0 +1,20 @@
+<body>
+  <h1>배열Ex3</h1>
+  <script>
+    //총점은 xxx 점이고 평균은 xx점 입니다.
+    const score = [64,60,90,85,77];
+    
+    /* const total = () => {
+      const init = 0;
+      return score.reduce((acc, current) => acc + current, init);
+
+       console.log(`총점은 ${total()}점이고, 평균은 ${total()/score.length}점 입니다.`);
+    } */
+
+    let total = 0;
+    const nums = num => total += num;
+    score.map(nums);  
+
+    console.log(`총점은 ${total}점이고, 평균은 ${total/score.length}점 입니다.`);
+  </script>
+</body>

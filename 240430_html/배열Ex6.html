@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>배열Ex6</title>
+</head>
+
+<body>
+  <h1>배열Ex6</h1>
+  <h2 class="title">현재 날짜와 시간</h2>
+  <!-- 
+    현재 년 월 일 요일 AM/PM 시: 분: 초
+    24시간제 x -> 12시간제
+
+    2024년 04월 30일 화요일 PM 05: 01: 15 <- 출력
+
+    1초에 한번씩 실행
+    setTimeout(function() {}, 시간); 지정 시간 후 한번만 실행
+    setInterval(콜백함수, 시간); 지정 시간마다 실행
+   -->
+   <script>
+    const today = new Date();
+    const year = today.getFullYear();
+    const nowMonth = today.getMonth() + 1;
+    const nowDate = today.getDate();
+    const nowDay = today.getDay();
+    const day = ['일','월','화','수','목','금','토'];
+    const Day = `${day[nowDay]}`;
+
+    let hrs = "";
+    if(today.getHours()>12) {
+      hrs="PM";
+    } else if(today.getHours()<12) {
+      hrs="AM";
+    }
+    
+    let si = today.getHours();
+    if(today.getHours()>12) {
+      si = today.getHours()-12;
+    } 
+   
+
+    const mins = today.getMinutes();
+    const sec = today.getSeconds();
+  
+    const obj = () => window.location.reload();
+    setTimeout(obj, 1000);
+
+    
+    document.querySelector('.title').innerText =("현재:") + (year + "년") + (nowMonth + "월") + (nowDate + "일") + (Day + "요일") + (hrs + si + ": ") + (mins + ": ") + (sec + " ");
+    
+
+    // , "현재 월: " + nowMonth, "현재 일: " + nowDate, "현재 요일: " + nowDay  ) ;
+
+   </script>
+
+
+</body>
+</html>
