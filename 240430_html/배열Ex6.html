@@ -32,22 +32,33 @@
       hrs="PM";
     } else if(today.getHours()<12) {
       hrs="AM";
-    }
+    } 
     
     let si = today.getHours();
     if(today.getHours()>12) {
       si = today.getHours()-12;
-    } 
+    } else if(today.getHours()>=0 && today.getHours() <=9) {
+      si="0" + today.getHours();
+    }
    
 
-    const mins = today.getMinutes();
-    const sec = today.getSeconds();
+    let mins = today.getMinutes();
+    if(today.getMinutes()>=0 && today.getMinutes() <=9) {
+      mins="0" + today.getMinutes();
+    }
+
+    let sec = today.getSeconds();
+    if(today.getSeconds()>=0 && today.getSeconds() <=9) {
+      sec="0" + today.getSeconds();
+    }
+
+
   
     const obj = () => window.location.reload();
     setTimeout(obj, 1000);
 
     
-    document.querySelector('.title').innerText =("현재:") + (year + "년") + (nowMonth + "월") + (nowDate + "일") + (Day + "요일") + (hrs + si + ": ") + (mins + ": ") + (sec + " ");
+    document.querySelector('.title').innerText =("현재:") + (year + "년") + (nowMonth + "월") + (nowDate + "일") + (Day + "요일") + (hrs + si + ": ") + (mins + ": ") + (sec);
     
 
     // , "현재 월: " + nowMonth, "현재 일: " + nowDate, "현재 요일: " + nowDay  ) ;
