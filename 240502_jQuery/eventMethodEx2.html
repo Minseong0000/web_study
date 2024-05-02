@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>eventMethodEx2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+ 
+  <style>
+    body {
+      margin: 50px auto;
+    }
+    .btn {
+      text-decoration: none;
+      color: #000;
+      border: 3px solid #000;
+      padding: 5px 20px;
+    }
+    .box {
+      border: 5px solid #000;
+      height: 300px;
+      width: 300px;
+      margin: 50px auto;
+      transition: .4s;
+    }
+  </style> 
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script>
+    //$(function() {}); DOM 함께 실행
+    $(function() {
+      $('.btn').on('click', ()=> {
+        $('.box_wrapper1').css({backgroundColor : '#4793AF', color : '#fff'});
+      })
+
+      $('.box_wrapper2').on({
+        'mouseenter': (e) => {
+          $(e.target).css({ borderRadius : '50%'})
+        },
+        'mouseleave' : (e) => {
+          $(e.target).css({ borderRadius : 0})
+        },
+      });
+    })
+   /*  $(document).ready(function () {
+      $('.btn').on('click', function (){
+        $('.box_wrapper1').css({'background-color':'lightgreen'})
+      });
+
+      $('.box_wrapper2').on('mouseover', () => {
+        $('.box_wrapper2').css({'border-radius': '50%'});
+      });
+
+      $('.box_wrapper2').on('mouseout', () => {
+        $('.box_wrapper2').css({'border-radius': '0%'});
+      });
+    }); */
+  </script>
+</head>
+
+<body>
+  <a href="#" class="btn">버튼</a>
+
+  <div class="box box_wrapper1">
+    버튼 클릭시 박스 배경색 변경
+  </div>
+
+  <div class="box box_wrapper2">
+    박스 위에 마우스를 올리면 원으로 변하고 벗어나면 원래대로 돌아옴
+  </div>
+</body>
+</html>

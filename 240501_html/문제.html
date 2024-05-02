@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>bingo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="./문제.css">
+  <script defer src="./문제.js"></script>
+  
+</head>
+
+<body onload="newCard()">
+  <h1>재미있는 빙고게임</h1>
+  <div class="content">
+    <table class="bingo">
+      <tr>
+        <td id="square0"></td>
+        <td id="square1"></td>
+        <td id="square2"></td>
+      </tr>
+      <tr>
+        <td id="square3"></td>
+        <td id="square4"></td>
+        <td id="square5"></td>
+      </tr>
+      <tr>
+        <td id="square6"></td>
+        <td id="square7"></td>
+        <td id="square8"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="btn_wrapper">
+    <p><a href="#" onclick="anotherCard()">새로고침</a></p>
+    <p><a href="#" onclick="randomNumber()">번호뽑기</a></p>
+  </div>
+</body>
+
+</html>
