@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>attr2Ex2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="../assets/style/minireset.min.css">
+  <style>
+    .gallery {
+      width: 80%; height: 60vh;
+      margin: 50px auto;
+      border: 1px solid #000;
+      overflow: hidden;
+      position: relative;
+    }
+    .gallery .main-img{
+      width: 100%; height: 100%;
+    }
+    .gallery .img-btn{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      position: absolute; bottom: 0;
+      
+    }       
+    .gallery .img-btn li img{
+      width: 100%; height: 100%;
+    }     
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function(){
+      $('.img-btn li img').eq(0).on('click', ()=>{
+        $('.main-img > img').attr({src : '../assets/images/bg1.jpg'});
+      });
+
+      $('.img-btn li img').eq(1).on('click', ()=>{
+        $('.main-img > img').attr({src : '../assets/images/bg2.jpg'});
+      });
+
+      $('.img-btn li img').eq(2).on('click', ()=>{
+        $('.main-img > img').attr({src : '../assets/images/bg3.jpg'});
+      });
+
+      $('.img-btn li img').eq(3).on('click', ()=>{
+        $('.main-img > img').attr({src : '../assets/images/bg4.jpg'});
+      });
+      
+    })
+  </script>
+</head>
+
+<body>
+  <div class="gallery">
+    <div class="main-img">
+      <img src="../assets/images/bg1.jpg" alt="bg1">
+    </div>
+    <ul class="img-btn">
+      <li><img src="../assets/images/bg1.jpg" alt="bg1" role="button"></li>
+      <li><img src="../assets/images/bg2.jpg" alt="bg2" role="button"></li>
+      <li><img src="../assets/images/bg3.jpg" alt="bg3" role="button"></li>
+      <li><img src="../assets/images/bg4.jpg" alt="bg4" role="button"></li>
+    </ul>
+  </div>
+</body>
+</html>

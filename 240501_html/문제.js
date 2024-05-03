@@ -1,16 +1,4 @@
 
-/* let ran = Math.ceil(Math.random() * 9);
- // console.log(ran);
-
- const tds = document.querySelectorAll('td');
- console.log(tds);
-
- tds.forEach((td, idx) => {
-   // document.td.innerText = ran;
-   td.textContent = `${ran}`;
-
- });
-*/
 var usedNums = new Array();
 
 function newCard() {
@@ -18,7 +6,6 @@ function newCard() {
     setSquare(i);
   }
 }
-// console.log();
 
 function setSquare(squareNumber) {  
   var currSquare = "square" + squareNumber;
@@ -50,31 +37,4 @@ function anotherCard() {
 
 function randomNumber() {
   return console.log(Math.ceil(Math.random()*9));
-/*   if(ran == newNum) {
-    currSquare.backgroundColor = 'blue';
-  } */
 }
-
-/* function winNum() {
-  var callNum;
-
-  do {
-    callNum = randomNumber();
-  }
-  while (usedNum[callNum]);
-
-  usedNums[callNum] = true;
-
-  if(callNum = newNum) {
-    newCard().style.backgroundColor = 'orange';
-  }
-}
-
-winNum(); */
-// if(randomNumber()==)
-
-
-/* if(randomNumber() == newNum) {
-  
-} */
-// console.log(setSquare());

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>attrEx2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    .gallery {
+      width: 80vw;
+      margin: 50px auto;
+      border: 3px solid #000;
+    }
+    .gallery img {
+      width: 100%; height: 100%;
+      vertical-align: top;
+    }
+    .btn_wrapper {
+      list-style: none;
+      margin: 0; padding: 0;
+      display: flex;
+    }
+    .btn_wrapper li {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+    .btn_wrapper li:hover {
+      opacity: 1;
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function() {
+      /* 첫번째 이미지를 클릭하면, 첫번째 이미지로 메인 이미지 변경
+      $('.btn_wrapper li').eq(0).on('click', () => {
+        $('.gallery .main-img img').attr({ src : './images/bg1.jpg', alt : 'bg1'});
+      });
+      $('.btn_wrapper li').eq(1).on('click', () => {
+        $('.gallery .main-img img').attr({ src : './images/bg2.jpg', alt : 'bg2'});
+      });
+       */
+
+      //  event.currentTarget; 내가 클릭한 그 요소의 이벤트 리스너가 바인딩 된 요소
+      //  event.target; 내가 클릭한 그 요소
+       $('.btn_wrapper li').on('click', (e) => {
+        // const imgSrc = $(e.currentTarget).find('img').attr('src');
+        const imgSrc = $(e.target).attr('src');
+        const imgAlt = $(e.target).attr('alt');
+        $('.gallery .main-img img').attr({ src : imgSrc, alt : imgAlt});
+       });
+    })
+  </script>
+</head>
+
+<body>
+  <div class="gallery">
+    <div class="main-img">
+      <img src="../assets/images/bg1.jpg" alt="bg1">
+    </div>
+    <ul class="btn_wrapper">
+      <li role="button"><img src="../assets/images/bg1.jpg" alt="bg1"></li>
+      <li role="button"><img src="../assets/images/bg2.jpg" alt="bg2"></li>
+      <li role="button"><img src="../assets/images/bg3.jpg" alt="bg3"></li>
+      <li role="button"><img src="../assets/images/bg4.jpg" alt="bg4"></li>
+    </ul>
+  </div>
+</body>
+</html>

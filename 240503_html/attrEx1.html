@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>attrEx1</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    button {
+      background-color: #fff;
+      padding: 5px 10px;
+    }
+    img {
+      width: 500px;
+    }
+    p {
+      border: 1px solid #000;
+      width: 550px;
+      background-color: blue;
+      padding: 5px 10px;
+      color: #fff;
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function() {
+     
+      $('.btn1').on('click', ()=> {
+        let route = $('img').attr('src');//src 속성 읽기
+        $('p').text(route).css({backgroundColor : 'orange'});
+      })
+
+      $('.btn2').on('click', ()=> {
+        let text = $('img').attr('alt');//alt 속성 읽기
+        $('p').text(text).css({backgroundColor : 'purple'});
+      })
+
+      $('.btn3').on('click', ()=> {
+        const wt1 = $('img').attr('width');//img의 width 속성이 존재하지 않기 때문에 읽지 못함
+        const wt2 = $('img').css('width');
+        $('p').text(wt2).css({backgroundColor : 'lightskyblue'});
+      })
+
+    })
+  </script>
+</head>
+
+<body>
+  <h1>attrEx1</h1>
+  <button class="btn1">경로확인</button>
+  <button class="btn2">대체 텍스트</button>
+  <button class="btn3">이미지 가로 사이즈</button>
+
+  <img src="../assets/images/magnolia-medium.jpg" alt="꽃그림">
+
+  <p>이곳에출력됩니다</p>
+</body>
+</html>
