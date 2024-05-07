@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>split-text</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://assets.codepen.io/16327/ScrollSmoother.min.js"></script>
+  <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #161616;
+    }
+
+    .img {
+      width: 100%;
+      height: 100vh;
+      background: url(https://i.imgur.com/aGromZ6.png) no-repeat 50% 50%;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #smooth-content {
+      will-change: transform;
+    }
+
+    .text>h1 {
+      max-width: 90vw;
+      margin: auto;
+      line-height: 1.2;
+      font-size: 60px;
+      color: gold;
+    }
+
+    .text {
+      padding: 10vh 0;
+    }
+
+    .mask {
+      width: 100%;
+      height: 115%;
+      position: absolute;
+      background: #161616;
+      left: 0;
+      top: 0;
+      opacity: 0.8;
+    }
+
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <div class="img">
+
+      </div>
+
+      <div class="text">
+        <h1>Macaroon croissant <span class="red">pastry</span> shortbread cupcake chupa chups pudding. Gummies pie candy
+          canes sweet roll cake chupa chups cake fruitcake. Cake bonbon chupa chups carrot cake cake gingerbread cookie
+          cake. </h1>
+      </div>
+
+      <div class="img">
+
+      </div>
+    </div>
+  </div>
+  <script>
+    gsap.config({ trialWarn: false });
+    console.clear();
+    gsap.registerPlugin(ScrollTrigger, SplitText, ScrollSmoother);
+    let smoother = ScrollSmoother.create({
+      smooth: 2
+    });
+
+    let split = new SplitText("h1", { type: "lines" });
+    let masks;
+    function makeItHappen() {
+      masks = [];
+      split.lines.forEach((target) => {
+        let mask = document.createElement("span");
+        mask.className = "mask";
+        target.append(mask);
+        masks.push(mask);
+        gsap.to(mask, {
+          scaleX: 0,
+          transformOrigin: "right center",
+          ease: "none",
+          scrollTrigger: {
+            trigger: target,
+            markers: {
+              startColor: "white",
+              endColor: "#42a6e0",
+              fontSize: "12px",
+              indent: 10
+            },
+            scrub: true,
+            start: "top center",
+            end: "bottom center"
+          }
+        });
+      });
+    }
+
+    window.addEventListener("resize", newTriggers);
+
+    function newTriggers() {
+      ScrollTrigger.getAll().forEach((trigger, i) => {
+        trigger.kill();
+        masks[i].remove();
+      });
+      split.split();
+      makeItHappen();
+    }
+
+    makeItHappen();
+  </script>
+</body>
+
+</html>
