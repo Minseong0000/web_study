@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>classEx1</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+   .tab-menu {
+    list-style: none;
+    margin: 50px auto;
+    padding: 0;
+    position: relative;
+    padding-top: 50px;
+    width: 600px;
+   }
+   /* 각 영역의 제목 */
+   .tab-menu .title {
+    margin: 0;
+    background-color:  #AD88C6;
+    border-radius: 20px 20px 0 0;
+    padding: 10px;
+    text-align: center;
+    width: 199px; height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    top: 0; left: 0;
+   }
+   .tab-menu #tab-css .title { left: 200px;}
+   .tab-menu #tab-js .title { left: 400px;}
+   .tab-menu p {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #AD88C6;
+    padding: 20px;
+    display: none;
+   }
+   .tab-menu p strong {
+    display: block;
+    margin: 10px 0;
+   }
+   .tab-menu li.active h2, .tab-menu li.active p {
+    background-color: #E1AFD1;
+    display: block;
+   }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  
+</head>
+
+<body>
+  <ul class="tab-menu">
+    <li id="tab-html" class="active">
+      <h2 class="title" role="button">HTML</h2>
+      <p>
+        <strong>html5 Tutorial</strong>
+        <span>국무총리는 대통령을 보좌하며, 행정에 관하여 대통령의 명을 받아 행정각부를 통할한다. 국민의 자유와 권리는 헌법에 열거되지 아니한 이유로 경시되지 아니한다.</span>
+      </p>
+    </li>
+    <li id="tab-css">
+      <h2 class="title" role="button">CSS3</h2>
+      <p>
+        <strong>CSS3 Tutorial</strong>
+        <span>대한민국의 국민이 되는 요건은 법률로 정한다. 국무총리·국무위원 또는 정부위원은 국회나 그 위원회에 출석하여 국정처리상황을 보고하거나 의견을 진술하고 질문에 응답할 수 있다.</span>
+      </p>
+    </li>
+    <li id="tab-js">
+      <h2 class="title" role="button">JAVASCRIPT</h2>
+      <p>
+        <strong>JAVASCRIPT Tutorial</strong>
+        <span>국회의원의 선거구와 비례대표제 기타 선거에 관한 사항은 법률로 정한다. 행정각부의 장은 국무위원 중에서 국무총리의 제청으로 대통령이 임명한다.</span>
+      </p>
+    </li>
+  </ul>
+
+  <script>
+   $(function() {
+  /*   $('.tab-menu li:first-child').on('click', ()=> {
+      $('.tab-menu li:first-child').addClass('active');
+      $('.tab-menu li:nth-child(2)').removeClass('active');
+      $('.tab-menu li:nth-child(3)').removeClass('active');
+    });
+
+    $('.tab-menu li').eq(1).on('click', ()=> {
+      $('.tab-menu li').removeClass('active')
+      $('.tab-menu li').eq(1).addClass('active')
+    });
+
+    $('.tab-menu li').eq(2).on('click', ()=> {
+      $('.tab-menu li').removeClass('active')
+      $('.tab-menu li').eq(2).addClass('active')
+    }); */
+
+    $('.tab-menu li').on('click', (event) => {
+      $('.tab-menu li').removeClass('active');
+      // $(event.currentTarget).addClass('active'); 내가 클릭한 이벤트 리스너가 바인딩된 그 요소
+      $(event.target).parent().addClass('active');
+      //e.target 내가 클릭한 바로 그 요소
+    });
+   });
+  </script>
+</body>
+</html>

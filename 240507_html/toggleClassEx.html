@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>toggleClassEx</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    .box {
+      background-color: blue;
+      width: 80vw;
+      height: 50vh; 
+      margin: 0 auto;
+      transition: 1s;
+    }
+    .box.style1 {
+      background-color: orange; width: 50vw;
+    } 
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h1>toggleClassEx</h1>
+  <button class="btn">toggle</button>
+
+  <div class="box"></div>
+  <script>
+    $(function() {
+      $('.btn').on('click', ()=> {
+        $('.box').toggleClass('style1');
+      })
+    });
+
+  </script>
+</body>
+</html>
