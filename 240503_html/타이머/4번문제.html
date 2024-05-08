@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class Timer</title>
+<style>
+  body {
+    margin: 0;
+    text-align: center;
+    transition: background-color 1s ease; /* 배경색이 서서히 변하도록 설정 */
+  }
+  .info {
+    margin: auto;
+    padding: 20px;
+    background-color: #000;
+    color: lightpink;
+  }
+  h1 {
+    margin-top: 50px;
+    font-size: 36px;
+  }
+  #timer {
+    font-size: 60px;
+    margin-top: 20px;
+  }
+  #currentTime {
+    font-size: 22px;
+    margin-top: 15px;
+  }
+</style>
+</head>
+<body>
+<h1 class="info">어서와~ 즐거운 자바스크립트 수업시간이야^^</h1>
+<h1 id="classStatus">자 곧 시작이닷~!</h1>
+<div id="timer">00:00</div>
+<div id="currentTime"></div>
+
+<script>
+function startTimer() {
+  const lessonTime = 50 * 60; // 50분을 초 단위로 변환
+  const breakTime = 10 * 60; // 10분을 초 단위로 변환
+
+  let isLessonTime = true; // 수업 중인지 여부를 나타내는 변수
+
+  const startTime = new Date();
+  startTime.setHours(9); // 오전 9시로 설정
+  startTime.setMinutes(30); // 30분으로 설정
+
+  // 시작 시간이 이미 지났는지 확인
+  const now = new Date();
+  if (now > startTime) {
+    startTime.setDate(startTime.getDate() + 1); // 다음 날로 설정
+  }
+
+  let timeLeft = Math.floor((startTime - now) / 1000);
+
+  const timerInterval = setInterval(() => {
+    const minutes = Math.floor(timeLeft / 60);
+    let seconds = timeLeft % 60;
+
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    document.getElementById('timer').textContent = `${minutes}:${seconds}`;
+
+    timeLeft--;
+
+    if (timeLeft <= 5 && isLessonTime) {
+      const opacity = (5 - timeLeft) / 5; // 5초간 서서히 빨간색으로 변화하는 투명도 계산
+      document.body.style.backgroundColor = `rgba(255, 0, 0, ${opacity})`;
+    }
+
+    if (timeLeft < 0) {
+      if (isLessonTime) {
+        // 수업 시간이 끝나면 쉬는 시간 타이머로 바로 전환
+        timeLeft = breakTime;
+        isLessonTime = false;
+        document.getElementById('classStatus').textContent = "제발...쉬어...!";
+        // 쉬는 시간이 시작되면 랜덤한 색상으로 배경색 변경
+        const randomColor = getRandomColor();
+        document.body.style.backgroundColor = randomColor;
+      } else {
+        // 쉬는 시간이 끝나면 다시 수업 시간 타이머로 전환
+        timeLeft = lessonTime;
+        isLessonTime = true;
+        const classHour = Math.floor((startTime.getHours() - 9) / 2) + 1;
+        document.getElementById('classStatus').textContent = `${classHour}교시 수업 시작^^`;
+        document.body.style.backgroundColor = "white";
+      }
+    }
+  }, 1000);
+
+  function stopTimer() {
+    clearInterval(timerInterval);
+    alert("Timer stopped.");
+  }
+
+  setTimeout(stopTimer, (lessonTime + breakTime) * 1000 * 8); // 8교시 반복
+}
+
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 7)];
+  }
+  return color;
+}
+
+function updateCurrentTime() {
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+  const currentTimeString = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+  document.getElementById('currentTime').textContent = `현재 시간: ${currentTimeString}`;
+}
+
+startTimer();
+setInterval(updateCurrentTime, 1000); // 1초마다 현재 시간 업데이트
+</script>
+</body>
+</html>
