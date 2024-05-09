@@ -15,12 +15,13 @@
       margin: 0;
       overflow-x: hidden;
     }
-    #container {
-      background-color: grey;
-      /* display: inline-block; */
-      /* white-space: nowrap; */
-      height: 100vh;
+
+    .races {
+      width: fit-content;
+      display: flex;
+      flex-wrap: nowrap;
     }
+
     .horizontal {
       background-color: #243029;
       width: 1920px;
@@ -87,41 +88,57 @@
 </head>
 
 <body>
-  <div id="container">
-    <div class="horizontal">
-      <h2>I didn't mean to revolutize.</h2>
-      <img src="./img/가로1.png" alt="img">
-      <img src="./img/가로2.jpg" alt="img">
+  <div class="racesWrapper">
+    <div class="races">
 
-      <p> I just wanted to know why
-        I had to do it in one way only,
-        and not in another way.</p>
-      <p>-Vivienne Isabel Westwood-</p>
-      <p>1941~2022</p>
-    </div>
-    <div class="horizontal2">
-      <p>안녕</p>
-    </div>
-    <div class="horizontal3">
-      <p>안녕</p>
+      <div class="horizontal">
+        <h2>I didn't mean to revolutize.</h2>
+        <img src="./img/가로1.png" alt="img">
+        <img src="./img/가로2.jpg" alt="img">
+        <p> I just wanted to know why
+          I had to do it in one way only,
+          and not in another way.</p>
+        <p>-Vivienne Isabel Westwood-</p>
+        <p>1941~2022</p>
+      </div>
+
+      <div class="horizontal2">
+        <p>안녕</p>
+      </div>
+
+      <div class="horizontal3">
+        <p>안녕</p>
+      </div>
     </div>
   </div>
 
   <script>
     gsap.registerPlugin(ScrollTrigger)
 
-    const container = document.getElementById("container");
+    const races = document.querySelector(".races");
+    console.log(races.offsetWidth)
 
-    gsap.to(container, {
-      x: () => -(container.scrollWidth - document.documentElement.clientWidth) + "px",
+    function getScrollAmount() {
+      let racesWidth = races.scrollWidth;
+      return -(racesWidth - window.innerWidth);
+    }
+
+    const tween = gsap.to(races, {
+      x: getScrollAmount,
+      duration: 3,
       ease: "none",
-      scrollTrigger: {
-        trigger: container,
-        invalidateOnRefresh: true,
-        pin: true,
-        scrub: 1,
-        end: () => "+=" + (container.offsetWidth - innerWidth)
-      }
+    });
+
+
+    ScrollTrigger.create({
+      trigger: ".racesWrapper",
+      start: "200px top",
+      end: () => `+=${getScrollAmount() * -1}`,
+      pin: true,
+      animation: tween,
+      scrub: 1,
+      invalidateOnRefresh: true,//사이즈 조절시 새로고침
+      markers: true
     })
 
   </script>

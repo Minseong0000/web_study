@@ -1,25 +1,63 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8">
   <title>title</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+
     body {
-      height: 200vh;
-      background-color: #ddd;
+      margin: 0;
+      background: #15151e;
+      overflow-x: hidden;
     }
     .races {
+      width: fit-content;
       display: flex;
+      flex-wrap: nowrap;
     }
-    h2 {
-      width: 50vw;
+
+    .races h2 {
+      font-family: 'Staatliches', cursive;
+      font-size: 30vw;
+      flex-shrink: 0;
+      padding-right: 0.3em;
+      padding-left: 0.3em;
+      color: #e10600;
+
+      margin: 0;
+    }
+
+    .races h2:last-of-type {
+      background: #e1e1ff;
+    }
+
+    .lightBG {
+      background: #313143;
+    }
+
+    .space-20vh {
+      height: 20vh;
+    }
+
+    .space-30vh {
+      height: 30vh;
+    }
+
+    .space-50vh {
+      height: 50vh;
+    }
+
+    .space-100vh {
+      height: 100vh;
     }
   </style>
   <script src="../assets/jquery-3.7.1.min.js"></script>
   <script src="./gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="./horizontalscroll.js"></script>
 </head>
 
 <body>
@@ -36,5 +74,36 @@
   </div>
 
   <div class="space-100vh lightBG"></div>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    
+const races = document.querySelector(".races");
+console.log(races.offsetWidth)
+
+function getScrollAmount() {
+	let racesWidth = races.scrollWidth;
+	return -(racesWidth - window.innerWidth);
+}
+
+const tween = gsap.to(races, {
+	x: getScrollAmount,
+	duration: 3,
+	ease: "none",
+});
+
+
+ScrollTrigger.create({
+	trigger:".racesWrapper",
+	start:"top 20%",
+	end: () => `+=${getScrollAmount() * -1}`,
+	pin:true,
+	animation:tween,
+	scrub:1,
+	invalidateOnRefresh:true,//사이즈 조절시 새로고침
+	markers:true
+})
+  </script>
 </body>
+
 </html>
