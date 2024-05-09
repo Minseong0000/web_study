@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>animateEx5</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    body {
+      margin: 0;
+      background-color: lightskyblue;
+      height: 300vh;
+    }
+    .nav-wrapper {
+      background-color: orange;
+      width: 300px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: -300px;
+      transition: .5s;
+    }
+    .nav-wrapper .toggle-btn {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.4rem;
+      position: fixed;
+      top: 0;
+      margin-left: 310px;
+      margin-top: 40px;
+      
+    }
+    .nav-wrapper .side-menu {
+      list-style: none;
+      padding: 0;
+      margin-top: 50px;
+    }
+    .nav-wrapper.opened {
+      left: 0;
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <nav class="nav-wrapper">
+    <a href="#" class="toggle-btn">☰</a>
+    <ul class="side-menu">
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+    </ul>
+  </nav>
+
+</body>
+<script>
+  $('.toggle-btn').on('click', ()=> {
+    $('.nav-wrapper').toggleClass('opened')
+  });
+</script>
+</html>

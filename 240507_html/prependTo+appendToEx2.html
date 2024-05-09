@@ -25,11 +25,13 @@
       top: 50%; left: 50%;
       transform: translate(-50%, 0%);
     }
+    img {
+      width: 60vw; height: 50vh;
+    }
     .btn-group li {
       position: absolute;
       z-index: 1;
       font-size: 5rem;
-      background-color: #ddd;
       width: 50px; height: 50px;
       line-height: 50px;
     }
@@ -39,9 +41,18 @@
     .btn-group .left {
       right: 70%; top: 150px;
     }
-   
   </style>
   <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+      $('.left').on('click', () => {
+        $('img').first().appendTo('.img-wrapper');
+      });
+      $('.right').on('click', ()=> {
+        $('img').last().prependTo('.img-wrapper');
+      });
+    })
+  </script>
 </head>
 
 <body>
@@ -58,5 +69,6 @@
       <li><img src="../assets/images/bg4.jpg" alt="bg4"></li>
     </ul>
   </div>
+ 
 </body>
 </html>

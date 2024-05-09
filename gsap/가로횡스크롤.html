@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>팀프로젝트</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="../assets/style/minireset.min.css">
+  <link rel="stylesheet" href="../assets/style/fonts.css">
+  <style>
+    body {
+      font-family: "Abhaya Libre", serif;
+      font-weight: 800;
+      font-size: 153px;
+      margin: 0;
+      overflow-x: hidden;
+    }
+    #container {
+      background-color: grey;
+      /* display: inline-block; */
+      /* white-space: nowrap; */
+      height: 100vh;
+    }
+    .horizontal {
+      background-color: #243029;
+      width: 1920px;
+      height: 1603px;
+      position: relative;
+    }
+
+    .horizontal h2 {
+      color: #fff;
+      text-transform: uppercase;
+      padding-top: 173px;
+      line-height: 1.2;
+    }
+
+    .horizontal img:first-of-type {
+      position: absolute;
+      right: 87px;
+      top: 217px;
+    }
+
+    .horizontal img:last-of-type {
+      position: absolute;
+      bottom: 0;
+      width: 740px;
+      height: 992px;
+    }
+
+    .horizontal p {
+      color: #fff;
+      width: 1058px;
+      position: absolute;
+      right: 0;
+      bottom: 682px;
+    }
+
+    .horizontal p:first-of-type {
+      font-size: 65px;
+    }
+
+    .horizontal p:nth-of-type(2) {
+      font-size: 70px;
+      margin-top: 85px;
+    }
+
+    .horizontal p:nth-of-type(3) {
+      font-size: 60px;
+    }
+
+    .horizontal2 {
+      background-color: #243029;
+      width: 1920px;
+      height: 1603px;
+    }
+
+    .horizontal3 {
+      background-color: #243029;
+      width: 1920px;
+      height: 1603px;
+    }
+  </style>
+  <script src="./gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div class="horizontal">
+      <h2>I didn't mean to revolutize.</h2>
+      <img src="./img/가로1.png" alt="img">
+      <img src="./img/가로2.jpg" alt="img">
+
+      <p> I just wanted to know why
+        I had to do it in one way only,
+        and not in another way.</p>
+      <p>-Vivienne Isabel Westwood-</p>
+      <p>1941~2022</p>
+    </div>
+    <div class="horizontal2">
+      <p>안녕</p>
+    </div>
+    <div class="horizontal3">
+      <p>안녕</p>
+    </div>
+  </div>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger)
+
+    const container = document.getElementById("container");
+
+    gsap.to(container, {
+      x: () => -(container.scrollWidth - document.documentElement.clientWidth) + "px",
+      ease: "none",
+      scrollTrigger: {
+        trigger: container,
+        invalidateOnRefresh: true,
+        pin: true,
+        scrub: 1,
+        end: () => "+=" + (container.offsetWidth - innerWidth)
+      }
+    })
+
+  </script>
+</body>
+
+</html>

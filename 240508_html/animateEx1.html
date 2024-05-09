@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>animateEx1</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    .box {
+      background-color: maroon;
+      width: 200px; height: 200px;
+      color: #fff;
+      position: absolute;
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script src="../assets/jquery-ui.min.js"></script>
+</head>
+
+<body>
+  <button id="btn1">왼쪽</button>
+  <button id="btn2">오른쪽</button>
+
+  <div class="box">애니메이션</div>
+  <script>
+    $('#btn1').on('click', ()=> {
+      $('.box').animate({ "left" : "-=50px" }, 100);
+    });
+    $('#btn2').on('click', ()=> {
+      $('.box').animate({ "left" : "+=50px" }, 400);
+    });
+
+    // https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode
+    // (e.key === 'enter' ) || (e.key === 13)
+    $(document).keydown( (e) => {
+        switch(e.key) {
+      case 'ArrowLeft' :
+        $('.box').animate({ "left" : "-=50px" }, 100);
+        break;
+      case 'ArrowRight' :
+        $('.box').animate({ "left" : "+=50px" }, 400);
+        break;
+      }
+    });
+  
+
+  </script>
+</body>
+</html>

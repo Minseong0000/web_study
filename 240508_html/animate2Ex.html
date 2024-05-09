@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>animateEx2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    .gallery-wrapper {
+      width: 300px;
+      height: 200px;
+      border: 3px solid #000;
+      margin: 50px auto;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-wrapper {
+      position: absolute;
+      bottom: 0; left: 110px;
+      
+    }
+    .btn-wrapper button {
+      width: 15px; height: 15px;
+      border-radius: 51%;
+      border: transparent;
+    }
+    .img-wrapper, .btn-wrapper {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .img-wrapper {
+      display: flex;
+
+    }
+    .img-wrapper img {
+      vertical-align: top;
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script src="../assets/jquery-ui.min.js"></script>
+</head>
+
+<body>
+  <div class="gallery-wrapper">
+    <ul class="btn-wrapper">
+      <li><button class="btn1"></button></li>
+      <li><button class="btn2"></button></li>
+      <li><button class="btn3"></button></li>
+      <li><button class="btn4"></button></li>
+    </ul>
+
+    <ul class="img-wrapper">
+      <li><img src="https://placehold.co/300x200/FFFF80/ddd?text=img1" alt="이미지"></li>
+      <li><img src="https://placehold.co/300x200/FFFF80/ddd?text=img2" alt="이미지"></li>
+      <li><img src="https://placehold.co/300x200/FFFF80/ddd?text=img3" alt="이미지"></li>
+      <li><img src="https://placehold.co/300x200/FFFF80/ddd?text=img4" alt="이미지"></li>
+    </ul>
+  </div>
+  <script>
+    $('.btn1').on('click', ()=> {
+      $('.img-wrapper li').eq(0).first().prependTo('.img-wrapper');
+    });
+    $('.btn2').on('click', ()=> {
+      $('.img-wrapper li').eq(1).first().prependTo('.img-wrapper');
+    });
+    $('.btn3').on('click', ()=> {
+      $('.img-wrapper li').eq(2).first().prependTo('.img-wrapper');
+    });
+    $('.btn4').on('click', ()=> {
+      $('.img-wrapper li').eq(3).first().prependTo('.img-wrapper');
+    });
+  </script>
+</body>
+
+</html>

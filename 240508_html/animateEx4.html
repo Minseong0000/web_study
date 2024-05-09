@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>animateEx4</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+     .wrapper {
+      /* background-color: #999; */
+      width: 250px;
+      height: 100%;
+      position: fixed;
+      left: -190px;
+    }
+    .wrapper .side-menu {
+      list-style: none;
+      background-color: lightblue;
+      margin: 0;
+      padding: 100px 0 0 0;
+      width: 190px;
+      height: 100%;
+      box-sizing: border-box;
+      font-weight: bold;
+      font-size: 1.2rem;
+      line-height: 2;
+      text-align: center;
+      
+    }
+    .wrapper .btn {
+      background-color: lightblue;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 190px;
+      top: 10px;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      text-indent: -9999px;
+      background-image: url(../assets/images/자물쇠.png);
+      background-size: 50px;
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }   
+    .wrapper .btn.opened {
+      background-image: url(../assets/images/자물쇠해제.png);
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <nav class="wrapper">
+    <ul class="side-menu">
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+    </ul>
+    <div class="btn">버튼</div>
+  </nav>
+  <script>
+    $('.btn').on('click', (e) => {
+      $('.wrapper').animate({
+        left:$('.wrapper').css('left') === '0px' ? '-190px' : '0px'
+      });
+      $(e.target).toggleClass('opened');
+    });   
+  </script>
+</body>
+</html>
