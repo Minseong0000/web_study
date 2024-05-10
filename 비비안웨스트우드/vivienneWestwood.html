@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Vivienne Westwood</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- reset -->
+  <link rel="stylesheet" href="../assets/style/minireset.min.css">
+  <!-- font -->
+  <link rel="stylesheet" href="../assets/style/fonts.css">
+  <style>   
+    header {
+      height: 107px;
+      background-color: #A7A7A7;
+    }
+    header nav .header-top {
+      font-family: 'Pretendard', san-serif;
+      font-size: 15px;
+      text-align: center;
+      height: 23px;
+      background-color: #fff;
+    }
+    header nav .header-top img {
+      width: 15px; height: 15px;
+    }
+    header nav .gnb-wrapper {
+      display: flex;
+      justify-content: space-between;
+      line-height: 84px;
+    }
+    header nav .gnb-wrapper ul {
+      display: flex;
+    }
+    header nav .gnb-wrapper .gnb li{
+      margin-right: 18px;
+      color: #fff;
+    }
+    header nav .gnb-wrapper a > img {
+      padding: 10px 10px 0 20px;
+      height: 75px;
+    }
+    header nav .gnb-wrapper .search-engine li:last-child a {
+      display: block;
+      background: url(./img/쇼핑백.png) no-repeat 50% / cover;
+      width: 25px; height: 25px;
+      margin-top: 27px;
+      margin-right: 20px;
+    }
+    header nav .gnb-wrapper .search-engine li {
+      margin-right: 20px;
+    }
+    /* ========================================header======================================= */
+    .main {
+      background-color: #b5b5b5;
+      height: 3100px; 
+    }
+    .main img {
+      display: block;
+      padding-top: 360px;
+      margin: 0 auto;    
+    }
+  
+  </style>
+  <script>
+    
+  </script>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <!--  -->
+  <script src="./gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <nav>
+    <div class="header-top"><span>VIVIENNE WESTWOOD SPRING-SUMMER 2024</span><img src="./img/별.png" alt="별 아이콘"></div> 
+    <div class="gnb-wrapper">
+      <a href="#"><img src="./img/header-logo.png" alt="로고이미지"></a>
+      <ul class="gnb">
+        <li><a href="#">SHOP</a></li>
+        <li><a href="#">신상품</a></li>
+        <li><a href="#">여성</a></li>
+        <li><a href="#">남성</a></li>
+        <li><a href="#">선물</a></li>
+        <li><a href="#">SALE</a></li>
+        <li><a href="#">COLLECTIONS</a></li>
+      </ul>
+      <ul class="search-engine">
+        <li><a href="#">Search</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </div>
+    </nav>
+  </header>
+  <!-- ===================================HEADER======================================= -->
+  <section class="main">
+
+   
+      <div class="img-wrapper">
+        <img src="./img/main2.jpg" alt="메인모델" class="main-model">
+      </div>
+     
+
+  </section>
+
+  <script>
+     gsap.registerPlugin(ScrollTrigger);
+
+     gsap.to(".main-model", {
+      scale: 1,
+      scrollTrigger: {
+        trigger: ".main-model",
+        start: "370px top",
+        end: "bottom bottom",
+        scrub: true,
+        markers: true,
+      },
+      duration: 3,
+      ease: "power4.out"
+    })
+
+  </script>
+</body>
+</html>
