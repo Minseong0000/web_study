@@ -409,6 +409,7 @@
     <div class="text3"><p>ANGLOMANIA</p></div>
   </div>
   <div class="empty"></div>
+  <!-- =======================================script========================================== -->
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
@@ -423,6 +424,17 @@
       },
       duration: 5,
       ease: "power4.out"
+    });
+
+    gsap.to(".img-wrapper", {
+      scrollTrigger: {
+        trigger: ".img-wrapper",
+        start: "top 10%",
+        scrub: true,
+        markers: true,
+        pin: true,
+      },  
+      duration: 5,  
     })
     // <!-- ===================================Main======================================= -->
     const races = document.querySelector(".races");
