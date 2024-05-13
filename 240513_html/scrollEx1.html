@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>scrollEx1</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      height: 300vh;
+    }
+    .on {
+      opacity: 0;
+      font-size: 5rem;
+      position: fixed;
+      bottom: 30px; right: 30px;  
+      text-decoration: none;
+      transition: .4s;
+      animation: mov infinite .5s ease-in-out;
+      pointer-events: none;/* 마우스 성격 제어  */
+    }
+    @keyframes mov {
+      0%, 100% {
+        transform: translateX(5px) rotate(5deg);
+      } 
+      50% {
+        transform: translateX(0) rotate(-5deg);
+      }
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h1>TOP</h1>
+  <a href="#" class="on">👻</a>
+
+  <script>
+     $(window).on('scroll', (e)=> {
+      /* 
+      const scrollTop = $(e.target).scrollTop();
+      if(scrollTop > 300) {
+        $('.on' ).css({opacity: 1, pointerEvents: 'auto'});
+      } else {
+        $('.on' ).css({opacity: 0, pointerEvents: 'none'});
+      }
+      */
+      if(scrollY > 300) {
+        $('.on' ).css({opacity: 1, pointerEvents: 'auto'});
+      } else {
+        $('.on' ).css({opacity: 0, pointerEvents: 'none'});
+      }   
+    });
+
+    // const goToUp = document.querySelector('on');
+    $('.on').on('click', (e)=> {
+      e.preventDefault();//요소의 기본 성격 제거 
+      /*    
+      $('html, body').animate({ 
+        scrollTop:0 }, 300
+      );
+      */
+      scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });  
+    });
+  </script>
+</body>
+</html>
