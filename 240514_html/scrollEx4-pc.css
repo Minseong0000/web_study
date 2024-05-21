@@ -1,0 +1,16 @@
+@charset 'utf-8';
+
+@media (min-width: 1200px) {
+  header {
+    flex-wrap: nowrap;
+  }
+  header ul {
+    display: contents;
+  }
+  header ul li {
+    margin-right: 20px;
+  }
+  header button {
+    display: none;
+  }
+}

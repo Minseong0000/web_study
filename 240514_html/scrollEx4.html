@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>scrollEx4</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <!-- favicon -->
+  <!-- open graphy -->
+  <!-- meta tag -->
+  <link rel="stylesheet" href="../assets/style/minireset.min.css">
+  <link rel="stylesheet" href="./scrollEx4-m.css">
+  <link rel="stylesheet" href="./scrollEx4-pc.css">
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="textwrapper">
+      <h1>로고</h1>
+      <p>부드럽게 이동해 봅시다</p>
+    </div>
+    <ul>
+      <li><a href="#box1">box1</a></li>
+      <li><a href="#box2">box2</a></li>
+      <li><a href="#box3">box3</a></li>
+      <li><a href="#box4">box4</a></li>
+    </ul>
+    <button>☰</button>
+  </header>
+  <section id="slider">slide</section>
+  <section id="box1">box 1</section>
+  <section id="box2">box 2</section>
+  <section id="box3">box 3</section>
+  <section id="box4">box 4</section>
+
+  <script>
+    $('button').on('click', ()=> {
+      $('ul').toggleClass('on');
+      $('button').toggleClass('on');
+    });
+
+    $('a').on('click',(e)=>{
+      $(e.target).preventDefault();
+    })
+
+    $(window).on('scroll', ()=> {
+      if(scrollY > 100) {
+        $('header').addClass('on');
+      } else if(scrollY < 100) {
+        $('header').removeClass('on');
+      }
+      console.log(scrollY);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>swiperEx</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="../assets/style/minireset.min.css">
+  <link rel="stylesheet" href="../assets/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./swiperEx.css">
+  
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script src="../assets/swiper-bundle.min.js"></script>
+  <script defer src="./swiperEx.js"></script>
+
+  
+
+</head>
+
+<body>
+  <!-- swiper -->
+  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper main-swiper">
+    <div class="parallax-bg" style="
+          background-image: url(https://swiperjs.com/demos/images/nature-1.jpg);
+        " data-swiper-parallax="-23%"></div>
+    <ul class="swiper-wrapper">
+      <!-- 각 각의 슬라이드 .swiper-slide -->
+      <li class="swiper-slide bg1">
+        <div class="bg-box" data-swiper-parallax="-900"></div>
+        <h2 class="title" data-swiper-parallax="-300">Slide 1</h2>
+        <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
+        <p class="text" data-swiper-parallax="-100">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+        </p>
+      </li>
+      <li class="swiper-slide bg2">
+        <section class="section-box" data-swiper-parallax="-900">
+          <h2 class="title">title</h2>
+          <h3 class="subtitle">subtitle</h3>
+          <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+        </section>
+      </li>
+      <li class="swiper-slide bg3">
+        <div class="bg-box" data-swiper-parallax="-900"></div>
+        <h2 class="title" data-swiper-parallax="-300">Slide 3</h2>
+        <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
+        <p class="text" data-swiper-parallax="-100">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+        </p>
+      </li>
+      <li class="swiper-slide bg4">
+        <div class="bg-box" data-swiper-parallax="-900"></div>
+        <h2 class="title" data-swiper-parallax="-300">Slide 4</h2>
+        <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
+        <p class="text" data-swiper-parallax="-100">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+        </p>
+      </li>
+    </ul>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination main-page-no"></div>
+  </div>
+</body>
+</html>
