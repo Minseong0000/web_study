@@ -3,97 +3,87 @@
 
 <head>
   <meta charset="utf-8">
-  <title>가로</title>
+  <title>title</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <style>
-    html,
     body {
-      padding: 0;
+      height: 300vh;
+      font-family: Arial, sans-serif;
       margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    body {
-      overflow-x: hidden;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      padding-top: 50px;
     }
 
-    #container {
-      background-color: grey;
-      display: inline-block;
-      white-space: nowrap;
+    .slide-in {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: all 0.5s ease-in-out;
+    }
+
+    .slide-in img {
+      width: 300px;
+      height: auto;
+      display: block;
+    }
+
+    .slide-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .space {
       height: 100vh;
-    }
-
-    .module {
-      height: 100%;
-      display: inline-block;
-    }
-
-    .green {
-      width: 500px;
-      background-color: green;
-    }
-
-    .yellow {
-      width: 1300px;
-      background-color: yellow;
-    }
-
-    .purple {
-      width: 800px;
-      background-color: purple;
-    }
-
-    .orange {
-      width: 800px;
-      background-color: purple;
-    }
-
-    .blue {
-      width: 2100px;
-      background-color: blue;
-    }
-
-    .red {
-      width: 900px;
-      background-color: red;
     }
   </style>
   <script src="../assets/jquery-3.7.1.min.js"></script>
-  <script src="./gsap.min.js"></script>  
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
-  <div id="container">
-    <div class="module green"></div>
-    <div class="module yellow"></div>
-    <div class="module purple"></div>
-    <div class="module orange"></div>
-    <div class="module blue"></div>
-    <div class="module red"></div>
-    <div class="module green"></div>
-    <div class="module yellow"></div>
-    <div class="module purple"></div>
-    <div class="module orange"></div>
-    <div class="module blue"></div>
-    <div class="module red"></div>
+  <div class="space"></div>
+  <div class="container">
+    <div class="slide-in">
+      <img src="../assets/images/bg2.jpg" alt="Image 1">
+    </div>
+    <div class="slide-in">
+      <img src="../assets/images/bg1.jpg" alt="Image 2">
+    </div>
+    <div class="slide-in">
+      <img src="../assets/images/bg3.jpg" alt="Image 3">
+    </div>
+    <!-- Add more images as needed -->
   </div>
   <script>
-    gsap.registerPlugin(ScrollTrigger)
+    document.addEventListener('DOMContentLoaded', function () {
+      const slideInElements = document.querySelectorAll('.slide-in');
 
-    const container = document.getElementById("container");
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
 
-    gsap.to(container, {
-      x: () => -(container.scrollWidth - document.documentElement.clientWidth) + "px",
-      ease: "none",
-      scrollTrigger: {
-        trigger: container,
-        invalidateOnRefresh: true,
-        pin: true,
-        scrub: 1,
-        end: () => "+=" + (container.offsetWidth - innerWidth)
-      }
-    })
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      slideInElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
   </script>
 </body>
 
